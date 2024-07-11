@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+            <div class="email-wrap">
+                  <div class="row">
+                        {% include "applications/email/email-compose/components/email-left.html" %}
+                        {% include "applications/email/email-compose/components/email-right.html" %}
+                  </div>
+            </div>
+      </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/editor/ckeditor/ckeditor.js'%}"></script>
+<script src="{% static 'assets/js/editor/ckeditor/adapters/jquery.js'%}"></script>
+<script src="{% static 'assets/js/email-app.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

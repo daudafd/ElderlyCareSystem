@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/vector-map.scss' %}">
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+
+
+            {% include "miscellaneous/maps/vector-maps/components/vector-map.html" %}
+
+      </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/vector-map/jquery-jvectormap-2.0.2.min.js'%}"></script>
+<script src="{% static 'assets/js/vector-map/map/jquery-jvectormap-world-mill-en.js'%}"></script>
+<script src="{% static 'assets/js/vector-map/map/jquery-jvectormap-us-aea-en.js'%}"></script>
+<script src="{% static 'assets/js/vector-map/map/jquery-jvectormap-uk-mill-en.js'%}"></script>
+<script src="{% static 'assets/js/vector-map/map/jquery-jvectormap-au-mill.js'%}"></script>
+<script src="{% static 'assets/js/vector-map/map/jquery-jvectormap-chicago-mill-en.js'%}"></script>
+<script src="{% static 'assets/js/vector-map/map/jquery-jvectormap-in-mill.js'%}"></script>
+<script src="{% static 'assets/js/vector-map/map/jquery-jvectormap-asia-mill.js'%}"></script>
+<script src="{% static 'assets/js/vector-map/map-vector.js'%}"></script>
+<script src="{% static 'assets/js/tooltip-init.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

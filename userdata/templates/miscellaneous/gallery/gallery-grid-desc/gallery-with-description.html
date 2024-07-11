@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/photoswipe.scss' %}">
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+            <div class="row">
+                  <div class="col-sm-12">
+                        <div class="card">
+                              <div class="card-header">
+                                    <h5>IMAGE GALLERY WITH DESCRIPTION</h5>
+                              </div>
+
+                              <div class="my-gallery card-body row gallery-with-description" itemscope="">
+                                    {% include "miscellaneous/gallery/gallery-grid-desc/components/gallery-description.html" %}
+                                    {% include "miscellaneous/gallery/gallery-grid-desc/components/card.html" %}
+
+
+
+                              </div>
+                              <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <!--
+                    Background of PhotoSwipe.
+                    It's a separate element, as animating opacity is faster than rgba().
+                    -->
+                                    <div class="pswp__bg"></div>
+                                    <!-- Slides wrapper with overflow:hidden.-->
+                                    {% include "miscellaneous/gallery/gallery-grid-desc/components/pswd.html" %}
+
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/photoswipe/photoswipe.min.js'%}"></script>
+<script src="{% static 'assets/js/photoswipe/photoswipe-ui-default.min.js'%}"></script>
+<script src="{% static 'assets/js/photoswipe/photoswipe.js'%}"></script>
+<script src="{% static 'assets/js/tooltip-init.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

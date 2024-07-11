@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/prism.scss' %}">
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+
+            {% include "general/widget/chart-widget/components/chart.html" %}
+            {% include "general/widget/chart-widget/components/monthly-history.html" %}
+            {% include "general/widget/chart-widget/components/row-4-5.html" %}
+            {% include "general/widget/chart-widget/components/row-6-8.html" %}
+
+      </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+    <script src="{% static 'assets/js/slick/slick.min.js'%}"></script>
+    <script src="{% static 'assets/js/slick/slick.js'%}"></script>
+    <script src="{% static 'assets/js/header-slick.js'%}"></script>
+    <script src="{% static 'assets/js/chart/apex-chart/moment.min.js'%}"></script>
+    <script src="{% static 'assets/js/chart/apex-chart/apex-chart.js'%}"></script>
+    <script src="{% static 'assets/js/chart/apex-chart/stock-prices.js'%}"></script>
+    <script src="{% static 'assets/js/prism/prism.min.js'%}"></script>
+    <script src="{% static 'assets/js/clipboard/clipboard.min.js'%}"></script>
+    <script src="{% static 'assets/js/counter/jquery.waypoints.min.js'%}"></script>
+    <script src="{% static 'assets/js/counter/jquery.counterup.min.js'%}"></script>
+    <script src="{% static 'assets/js/counter/counter-custom.js'%}"></script>
+    <script src="{% static 'assets/js/custom-card/custom-card.js'%}"></script>
+    <script src="{% static 'assets/js/chart-widget.js'%}"></script>
+
+
+<!-- Plugins JS Ends-->
+{% endblock %}

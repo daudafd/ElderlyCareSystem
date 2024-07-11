@@ -1,0 +1,57 @@
+{% load static %}
+{% load sass_tags %}
+<div class="card">
+  <div class="card-header">
+    <h5>Browser defaults</h5><span>Not interested in custom validation feedback messages or writing JavaScript to change
+      form behaviors? All good, you can use the browser defaults. Try submitting the form below. Depending on your
+      browser and OS, you’ll see a slightly different style of feedback.</span><span>While these feedback styles cannot
+      be styled with CSS, you can still customize the feedback text through JavaScript.</span>
+  </div>
+  <div class="card-body">
+    <form> {% csrf_token %}
+      <div class="row g-3">
+        <div class="col-md-4">
+          <label class="form-label" for="validationDefault01">First name</label>
+          <input class="form-control" id="validationDefault01" type="text" placeholder="First name" required="">
+        </div>
+        <div class="col-md-4">
+          <label class="form-label" for="validationDefault02">Last name</label>
+          <input class="form-control" id="validationDefault02" type="text" placeholder="Last name" required="">
+        </div>
+        <div class="col-md-4 mb-3">
+          <label class="form-label" for="validationDefaultUsername">Username</label>
+          <div class="input-group"><span class="input-group-text" id="inputGroupPrepend2">@</span>
+            <input class="form-control" id="validationDefaultUsername" type="text" placeholder="Username"
+              aria-describedby="inputGroupPrepend2" required="">
+          </div>
+        </div>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label" for="validationDefault03">City</label>
+          <input class="form-control" id="validationDefault03" type="text" placeholder="City" required="">
+        </div>
+        <div class="col-md-3">
+          <label class="form-label" for="validationDefault04">State</label>
+          <select class="form-select" id="validationDefault04" required="">
+            <option selected="" disabled="" value="">Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label class="form-label" for="validationDefault05">Zip</label>
+          <input class="form-control" id="validationDefault05" type="number" placeholder="Zip" required="">
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="form-check">
+          <div class="checkbox p-0">
+            <input class="form-check-input" id="invalidCheck2" type="checkbox" required="">
+            <label class="form-check-label" for="invalidCheck2">Agree to terms and conditions</label>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </form>
+  </div>
+</div>

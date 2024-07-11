@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+            <div class="row">
+                  {% include "forms-table/forms/form-controls/megaoptions/components/default-style.html" %}
+                  {% include "forms-table/forms/form-controls/megaoptions/components/no-border.html" %}
+                  {% include "forms-table/forms/form-controls/megaoptions/components/solid-border.html" %}
+                  {% include "forms-table/forms/form-controls/megaoptions/components/offer-style.html" %}
+                  {% include "forms-table/forms/form-controls/megaoptions/components/inline-style.html" %}
+                  {% include "forms-table/forms/form-controls/megaoptions/components/vertical-style.html" %}
+                  {% include "forms-table/forms/form-controls/megaoptions/components/horizontal-style.html" %}
+            </div>
+      </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/height-equal.js'%}"></script>
+<script src="{% static 'assets/js/tooltip-init.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

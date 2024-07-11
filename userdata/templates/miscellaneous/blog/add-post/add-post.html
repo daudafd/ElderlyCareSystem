@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/select2.scss' %}">
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/dropzone.scss' %}">
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+
+            {% include "miscellaneous/blog/add-post/components/add-post.html" %}
+
+      </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/editor/ckeditor/ckeditor.js'%}"></script>
+<script src="{% static 'assets/js/editor/ckeditor/adapters/jquery.js'%}"></script>
+<script src="{% static 'assets/js/dropzone/dropzone.js'%}"></script>
+<script src="{% static 'assets/js/dropzone/dropzone-script.js'%}"></script>
+<script src="{% static 'assets/js/select2/select2.full.min.js'%}"></script>
+<script src="{% static 'assets/js/select2/select2-custom.js'%}"></script>
+<script src="{% static 'assets/js/email-app.js'%}"></script>
+<script src="{% static 'assets/js/form-validation-custom.js'%}"></script>
+<script src="{% static 'assets/js/tooltip-init.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

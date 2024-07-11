@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+  <div class="container-fluid">
+        {% include "layout/breadcrumb.html" %}
+        <div class="row">
+            {% include "general/dashboard/crypto/components/left.html" %}
+            {% include "general/dashboard/crypto/components/center.html" %}
+            {% include "general/dashboard/crypto/components/right-side.html" %}
+        
+        </div>
+      </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+   
+
+<script src="{% static 'assets/js/chart/apex-chart/apex-chart.js'%}"></script>
+<script src="{% static 'assets/js/chart/apex-chart/stock-prices.js'%}"></script>
+<script src="{% static 'assets/js/dashboard/dashboard_4.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

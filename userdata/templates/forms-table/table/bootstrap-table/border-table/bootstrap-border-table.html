@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+            <div class="row">
+
+                  {% include "forms-table/table/bootstrap-table/border-table/components/horizontal-borders.html" %}
+                  {% include "forms-table/table/bootstrap-table/border-table/components/vertical-borders.html" %}
+                  {% include "forms-table/table/bootstrap-table/border-table/components/both-bordeds.html" %}
+                  {% include "forms-table/table/bootstrap-table/border-table/components/borderless-table.html" %}
+                  {% include "forms-table/table/bootstrap-table/border-table/components/default-table.html" %}
+                  {% include "forms-table/table/bootstrap-table/border-table/components/solid-border.html" %}
+                  {% include "forms-table/table/bootstrap-table/border-table/components/double-border.html" %}
+                  {% include "forms-table/table/bootstrap-table/border-table/components/dotted-border.html" %}
+                  {% include "forms-table/table/bootstrap-table/border-table/components/dashed-border.html" %}
+                  {% include "forms-table/table/bootstrap-table/border-table/components/border-bottom.html" %}
+
+            </div>
+      </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/tooltip-init.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block content %}
+
+
+{% include "layout/breadcrumb.html" %}
+
+<!-- Container-fluid starts-->
+<div class="container-fluid">
+    <div class="page-body">
+    <div class="row">
+      <div class="col-xl-6 col-md-12 box-col-12">
+        <div class="card">
+          <div class="card-header">
+            <h5>Bar Chart</h5>
+          </div>
+          <div class="card-body chart-block">
+            <canvas id="myBarGraph"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-md-12 box-col-12">
+        <div class="card">
+          <div class="card-header">
+            <h5>Line Graph</h5>
+          </div>
+          <div class="card-body chart-block">
+            <canvas id="myGraph"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-md-12 box-col-12">
+        <div class="card">
+          <div class="card-header">
+            <h5>Radar Graph</h5>
+          </div>
+          <div class="card-body chart-block">
+            <canvas id="myRadarGraph"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-md-12 box-col-12">
+        <div class="card">
+          <div class="card-header">
+            <h5>Line Chart</h5>
+          </div>
+          <div class="card-body chart-block">
+            <canvas id="myLineCharts"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-md-12 box-col-12">
+        <div class="card">
+          <div class="card-header">
+            <h5>Doughnut Chart</h5>
+          </div>
+          <div class="card-body chart-block chart-vertical-center">
+            <canvas id="myDoughnutGraph"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-md-12 box-col-12">
+        <div class="card">
+          <div class="card-header">
+            <h5>Polar Chart</h5>
+          </div>
+          <div class="card-body chart-block chart-vertical-center">
+            <canvas id="myPolarGraph"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Container-fluid Ends-->
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<script src="{% static 'assets/js/chart/chartjs/chart.min.js' %}"></script>
+<script src="{% static 'assets/js/chart/chartjs/chart.custom.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+        <div class="container-fluid">
+                {% include "layout/breadcrumb.html" %}
+
+                {% include "forms-table/forms/form-controls/radio-checkbox-control/components/custom-radio.html" %}
+                {% include "forms-table/forms/form-controls/radio-checkbox-control/components/custom-checkbox.html" %}
+                {% include "forms-table/forms/form-controls/radio-checkbox-control/components/animated-radio.html" %}
+                {% include "forms-table/forms/form-controls/radio-checkbox-control/components/animated-checkbox.html" %}
+                {% include "forms-table/forms/form-controls/radio-checkbox-control/components/square-checkbox.html" %}
+
+        </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/tooltip-init.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

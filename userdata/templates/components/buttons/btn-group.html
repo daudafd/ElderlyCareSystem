@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/prism.scss' %}"> {% endblock %}
+{% block content %}
+<div class="page-body">
+
+  
+  <!-- Container-fluid starts                    -->
+  <div class="container-fluid">
+    {% include "layout/breadcrumb.html" %}
+    {% include "components/buttons/button-list/group.html" %}
+  </div>
+  <!-- Container-fluid Ends-->
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<script src="{% static 'assets/js/height-equal.js' %}"></script>
+{% endblock %}

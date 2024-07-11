@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/scrollbar.scss' %}">
+
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+<div class="page-body">
+  
+  <!-- Container-fluid starts-->
+  <div class="container-fluid">
+    {% include "layout/breadcrumb.html" %}
+    <div class="edit-profile">
+      <div class="row">
+        {% include "applications/user/edit-profile/components/left-sidebar.html" %}
+        {% include "applications/user/edit-profile/components/right-section.html" %}
+        {% include "applications/user/edit-profile/components/bottom-section.html" %}
+
+      </div>
+    </div>
+  </div>
+  <!-- Container-fluid Ends-->
+</div>
+{% endblock content %}
+{% block scriptcontent %}
+<script src="{% static 'assets/js/sidebar-menu.js' %}"></script>
+<script src="{% static 'assets/js/tooltip-init.js' %}"></script>
+
+{% endblock scriptcontent %}

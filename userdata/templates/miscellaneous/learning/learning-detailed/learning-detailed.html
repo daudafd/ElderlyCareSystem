@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+
+{% block css %}
+
+<!-- Plugins css start-->
+<!-- Plugins css Ends-->
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+
+            <div class="row">
+
+                  {% include "miscellaneous/learning/learning-detailed/components/learning-detailed.html" %}
+                  {% include "miscellaneous/learning/learning-detailed/components/find-course.html" %}
+
+            </div>
+      </div>
+</div>
+
+{% endblock %}
+
+
+{% block scriptcontent %}
+
+
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/tooltip-init.js'%}"></script>
+<!-- Plugins JS Ends-->
+
+
+{% endblock %}

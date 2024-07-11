@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/photoswipe.scss' %}">
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/prism.scss' %}">
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+    <div class="container-fluid">
+        {% include "layout/breadcrumb.html" %}
+
+        {% include "applications/social-app/components/social-app-1.html" %}
+        {% include "applications/social-app/components/social-app-2.html" %}
+        {% include "applications/social-app/components/social-app-3.html" %}
+        {% include "applications/social-app/components/social-app-4.html" %}
+        {% include "applications/social-app/components/social-app-5.html" %}
+        {% include "applications/social-app/components/social-app-6.html" %}
+        {% include "applications/social-app/components/social-app-7.html" %}
+        {% include "applications/social-app/components/social-app-8.html" %}
+        {% include "applications/social-app/components/social-app-9.html" %}
+        {% include "applications/social-app/components/social-app-10.html" %}
+
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/photoswipe/photoswipe.min.js'%}"></script>
+<script src="{% static 'assets/js/photoswipe/photoswipe-ui-default.min.js'%}"></script>
+<script src="{% static 'assets/js/photoswipe/photoswipe.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

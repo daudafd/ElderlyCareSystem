@@ -1,0 +1,82 @@
+{% load static %}
+{% load sass_tags %}
+
+<div class="tab-pane fade" id="v-pills-iduser3" role="tabpanel" aria-labelledby="v-pills-iduser3-tab">
+  <div class="profile-mail">
+    <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle update_img_8"
+        src="{% static 'assets/images/user/10.jpg'%}" alt="">
+      <div class="media-body mt-0">
+        <h5> <span class="first_name_8">Andew </span><span class="last_name_8">Jon</span></h5>
+        <p class="email_add_8">andrewj@gmail.com</p>
+        <ul>
+          <li><a href="#" onclick="printContact(8)" data-bs-toggle="modal" data-bs-target="#printModal">Print</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="email-general">
+      <h6>General</h6>
+      <p>Email Address: <span class="font-primary email_add_8">andrewj@gmail.com</span></p>
+      <div class="gender">
+        <h6>Personal</h6>
+        <p>Gender: <span>Female</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="right-history">
+  <div class="modal-header p-l-20 p-r-20">
+    <h6 class="modal-title w-100">Contact History<span class="pull-right"><a class="closehistory" href="#"><i
+            class="icofont icofont-close"></i></a></span></h6>
+  </div>
+  <div class="history-details">
+    <div class="text-center"><i class="icofont icofont-ui-edit"></i>
+      <p>Contact has not been modified yet.</p>
+    </div>
+    <div class="media"><i class="icofont icofont-star me-3"></i>
+      <div class="media-body mt-0">
+        <h6 class="mt-0">Contact Created</h6>
+        <p class="mb-0">Contact is created via mail</p><span class="f-12">Sep 10, 2019 4:00</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade modal-bookmark" id="printModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Print preview</h5>
+        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body list-persons">
+        <div class="profile-mail pt-0" id="DivIdToPrint">
+          <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle" id="updateimg"
+              src="{% static 'assets/images/user/2.png'%}" alt="">
+            <div class="media-body mt-0">
+              <h5><span id="printname">Bucky </span><span id="printlast">Barnes</span></h5>
+              <p id="printmail">barnes@gmail.com</p>
+            </div>
+          </div>
+          <div class="email-general">
+            <h6>General</h6>
+            <p>Email Address: <span class="font-primary" id="mailadd">barnes@gmail.com </span></p>
+          </div>
+        </div>
+        <button class="btn btn-secondary" id="btnPrint" type="button" onclick="printDiv();">Print</button>
+        <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

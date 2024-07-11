@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+            <div class="row"></div>
+            {% include "applications/ecommerce/pricing/components/pricing.html" %}
+      </div>
+</div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/counter/jquery.waypoints.min.js'%}"></script>
+<script src="{% static 'assets/js/counter/jquery.counterup.min.js'%}"></script>
+<script src="{% static 'assets/js/counter/counter-custom.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

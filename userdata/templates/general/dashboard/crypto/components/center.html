@@ -1,0 +1,369 @@
+{% load static %}
+<div class="col-xxl-6 col-xl-8 box-col-8e">
+    <div class="row"> 
+      <div class="col-sm-4"> 
+        <div class="currency-widget warning">
+          <div class="d-flex">
+            <div class="currency-icon-widget"> 
+              <svg>
+                <use href="{% static 'assets/svg/icon-sprite.svg'%}#beta"></use>
+              </svg>
+            </div>
+            <div> 
+              <h6>Bitcoin <span class="f-light">BTC</span></h6>
+            </div>
+          </div>
+          <div class="card"> 
+            <div class="card-body d-flex">
+              <div class="currency-chart-wrap">
+                <div id="currency-chart"> </div>
+              </div>
+              <div class="bg-light-warning text-center"> 
+                <h5 class="mb-0">$21,43</h5><span class="f-12 f-w-500 font-warning"><i class="me-1" data-feather="trending-up"></i>+50%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4"> 
+        <div class="currency-widget primary">
+          <div class="d-flex">
+            <div class="currency-icon-widget"> 
+              <svg>
+                <use href="{% static 'assets/svg/icon-sprite.svg'%}#eth"></use>
+              </svg>
+            </div>
+            <div> 
+              <h6>Ethereum <span class="f-light">ETC</span></h6>
+            </div>
+          </div>
+          <div class="card"> 
+            <div class="card-body d-flex">
+              <div class="currency-chart-wrap">
+                <div id="currency-chart2"></div>
+              </div>
+              <div class="bg-light-primary text-center"> 
+                <h5 class="mb-0">$7,450</h5><span class="f-12 f-w-500 font-primary"><i class="me-1" data-feather="trending-up"> </i>+35%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4"> 
+        <div class="currency-widget success">
+          <div class="d-flex">
+            <div class="currency-icon-widget"> 
+              <svg>
+                <use href="{% static 'assets/svg/icon-sprite.svg'%}#ltc"></use>
+              </svg>
+            </div>
+            <div> 
+              <h6>Leave Travel <span class="f-light">LTC</span></h6>
+            </div>
+          </div>
+          <div class="card"> 
+            <div class="card-body d-flex">
+              <div class="currency-chart-wrap">
+                <div id="currency-chart3"></div>
+              </div>
+              <div class="bg-light-success text-center"> 
+                <h5 class="mb-0">$2,198</h5><span class="f-12 f-w-500 font-success"><i class="me-1" data-feather="trending-up"> </i>+73%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-12"> 
+        <div class="card market-card"> 
+          <div class="card-header card-no-border">
+            <div class="header-top">
+              <h5>Market Graph</h5>
+              <ul class="nav nav-tabs custom-tab" id="tabdesign" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="hour-tab" data-bs-toggle="tab" data-bs-target="#hour" type="button" role="tab" aria-selected="false">1H</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="day-tab" data-bs-toggle="tab" data-bs-target="#day" type="button" role="tab" aria-selected="false">1D</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="week-tab" data-bs-toggle="tab" data-bs-target="#week" type="button" role="tab" aria-selected="true">1W</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="month-tab" data-bs-toggle="tab" data-bs-target="#month" type="button" role="tab" aria-selected="false">1M</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="year-tab" data-bs-toggle="tab" data-bs-target="#year" type="button" role="tab" aria-selected="false">1Y</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-body pt-0">
+            <div class="row m-0 overall-card">
+              <div class="col-xxl-8 col-xl-7 col-md-8 col-sm-7 p-0 box-col-7 col-ed-7">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                <div class="market-chart-container">
+                  <div id="market-chart"></div>
+                </div>
+              </div>
+              <div class="col-xxl-4 col-xl-5 col-md-4 col-sm-5 p-0 box-col-5 col-ed-5">
+                <div class="row g-sm-3 g-2">
+                  <div class="col-md-12">
+                    <div class="light-card balance-card align-items-center">
+                      <h6 class="f-w-400 f-14 mb-0">Coinmarketcap</h6>
+                      <div class="ms-auto text-end"><span class="badge badge-light-success rounded-pill">+11.67%</span></div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="light-card balance-card align-items-center">
+                      <h6 class="f-w-400 f-14 mb-0">Binance</h6>
+                      <div class="ms-auto text-end"><span class="badge badge-light-success rounded-pill">+10.67%</span></div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="light-card balance-card align-items-center">
+                      <h6 class="f-w-400 f-14 mb-0">Coinbase</h6>
+                      <div class="ms-auto text-end"><span class="badge badge-light-secondary rounded-pill">-11.67%</span></div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="light-card balance-card align-items-center">
+                      <h6 class="f-w-400 f-14 mb-0">Yobit</h6>
+                      <div class="ms-auto text-end"><span class="badge badge-light-success rounded-pill">+13.67%</span></div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <button class="btn btn-outline-dark w-100" type="button">See All Balance</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-12">
+        <div class="card"> 
+          <div class="card-header card-no-border">
+            <div class="header-top"> 
+              <h5>My Currencies</h5>
+            </div>
+          </div>
+          <div class="card-body pt-0">
+            <div class="recent-table table-responsive currency-table"> 
+              <table class="table"> 
+                <thead> 
+                  <tr> 
+                    <th class="f-light">Coin Name</th>
+                    <th class="f-light">Price</th>
+                    <th class="f-light">24h Change</th>
+                    <th class="f-light">Total Balance</th>
+                    <th class="f-light">Total Coin</th>
+                    <th class="f-light">Action</th>
+                  </tr>
+                </thead>
+                <tbody> 
+                  <tr> 
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="currency-icon warning">
+                          <svg>
+                            <use href="{% static 'assets/svg/icon-sprite.svg'%}#beta"></use>
+                          </svg>
+                        </div>
+                        <div> 
+                          <h6 class="f-14 mb-0 f-w-400">Bitcoin</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$13,098.09</td>
+                    <td>
+                      <div class="change-currency font-success"> <i class="me-1" data-feather="trending-up"></i>5.90</div>
+                    </td>
+                    <td>$74,871.470</td>
+                    <td>1.09634721</td>
+                    <td> 
+                      <button class="btn badge-light-primary">Trade</button>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="currency-icon success">
+                          <svg>
+                            <use href="{% static 'assets/svg/icon-sprite.svg'%}#ltc"></use>
+                          </svg>
+                        </div>
+                        <div> 
+                          <h6 class="f-14 mb-0 f-w-400">Litecoin</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$11,098.04</td>
+                    <td>
+                      <div class="change-currency font-secondary"><i class="me-1" data-feather="trending-down"></i>2.90</div>
+                    </td>
+                    <td>$87,897.098</td>
+                    <td>1.09675432</td>
+                    <td> 
+                      <button class="btn badge-light-primary">Trade</button>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="currency-icon primary">
+                          <svg>
+                            <use href="{% static 'assets/svg/icon-sprite.svg'%}#eth"></use>
+                          </svg>
+                        </div>
+                        <div> 
+                          <h6 class="f-14 mb-0 f-w-400">Eathereum</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$45,198.09</td>
+                    <td>
+                      <div class="change-currency font-success"><i class="me-1" data-feather="trending-up"></i>0.12</div>
+                    </td>
+                    <td>$45,178.010</td>
+                    <td>1.41557127</td>
+                    <td> 
+                      <button class="btn badge-light-primary">Trade</button>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="currency-icon secondary">
+                          <svg>
+                            <use href="{% static 'assets/svg/icon-sprite.svg'%}#bin"></use>
+                          </svg>
+                        </div>
+                        <div> 
+                          <h6 class="f-14 mb-0 f-w-400">Binance</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$35,098.34</td>
+                    <td>
+                      <div class="change-currency font-success"><i class="me-1" data-feather="trending-up"></i>3.56</div>
+                    </td>
+                    <td>$64,100.066</td>
+                    <td>1.78142254</td>
+                    <td> 
+                      <button class="btn badge-light-primary">Trade</button>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="currency-icon dark-green">
+                          <svg>
+                            <use href="{% static 'assets/svg/icon-sprite.svg'%}#te"></use>
+                          </svg>
+                        </div>
+                        <div> 
+                          <h6 class="f-14 mb-0 f-w-400">Tether</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$56,898.91</td>
+                    <td>
+                      <div class="change-currency font-secondary"><i class="me-1" data-feather="trending-down"></i>1.23</div>
+                    </td>
+                    <td>$61,574.218</td>
+                    <td>1.574215</td>
+                    <td> 
+                      <button class="btn badge-light-primary">Trade</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6"> 
+        <div class="card"> 
+          <div class="card-header card-no-border">
+            <div class="header-top gap-1">
+              <h5>Buy Coins</h5>
+              <div class="dropdown icon-dropdown">
+                <button class="btn dropdown-toggle" id="buydropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="icon-more-alt"></i></button>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="buydropdown"><a class="dropdown-item" href="#">Weekly</a><a class="dropdown-item" href="#">Monthly</a><a class="dropdown-item" href="#">Yearly</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body pt-0"> 
+            <form class="theme-form crypto-form">
+              <div class="mb-3">
+                <label class="form-label f-light" for="money">Enter your Money</label>
+                <div class="position-relative">
+                  <input class="form-control" id="money" type="number" placeholder="100">
+                  <select class="form-select crypto-select warning">
+                    <option>USD</option>
+                    <option>BTC</option>
+                    <option>LTC</option>
+                    <option>ETH</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label f-light" for="coin">Enter Coins Converted to</label>
+                <div class="position-relative">
+                  <input class="form-control" id="coin" type="number" placeholder="0.0043">
+                  <select class="form-select crypto-select primary">
+                    <option>BTC</option>
+                    <option>USD</option>
+                    <option>LTC</option>
+                    <option>ETH</option>
+                  </select>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-hover-effect w-100" type="button">Buy Coins</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6"> 
+        <div class="card"> 
+          <div class="card-header card-no-border">
+            <div class="header-top gap-1">
+              <h5>Sell Coins</h5>
+              <div class="dropdown icon-dropdown">
+                <button class="btn dropdown-toggle" id="selldropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="icon-more-alt"></i></button>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="selldropdown"><a class="dropdown-item" href="#">Weekly</a><a class="dropdown-item" href="#">Monthly</a><a class="dropdown-item" href="#">Yearly</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body pt-0"> 
+            <form class="theme-form crypto-form">
+              <div class="mb-3">
+                <label class="form-label f-light" for="crypto-coin">Enter Crypto Coins</label>
+                <div class="position-relative">
+                  <input class="form-control" id="crypto-coin" type="number" placeholder="100">
+                  <select class="form-select crypto-select warning">
+                    <option>USD</option>
+                    <option>BTC</option>
+                    <option>LTC</option>
+                    <option>ETH</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label f-light" for="bitcoin">Enter Money Converted to</label>
+                <div class="position-relative">
+                  <input class="form-control" id="bitcoin" type="number" placeholder="0.0043">
+                  <select class="form-select crypto-select primary">
+                    <option>LTC</option>
+                    <option>USD</option>
+                    <option>BTC</option>
+                    <option>ETH</option>
+                  </select>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-hover-effect w-100" type="button">Sell Coins</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

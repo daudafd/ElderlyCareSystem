@@ -1,0 +1,154 @@
+{% load static %}
+{% load sass_tags %}
+
+<div class="row">
+  <div class="col call-chat-sidebar">
+    <div class="card">
+      <div class="card-body chat-body">
+        <div class="chat-box">
+          <!-- Chat left side Start-->
+          <div class="chat-left-aside">
+            <div class="media"><img class="rounded-circle user-image" src="{% static 'assets/images/user/12.png'%}"
+                alt="">
+              <div class="about">
+                <a href="/user_profile" class="name f-w-600">Mark Jecno</a>
+                <div class="status">Status...</div>
+              </div>
+            </div>
+            <div class="people-list" id="people-list">
+              <div class="search">
+                <form class="theme-form"> {% csrf_token %}
+                  <div class="mb-3">
+                    <input class="form-control" type="text" placeholder="search"><i class="fa fa-search"></i>
+                  </div>
+                </form>
+              </div>
+              <ul class="list">
+                <li class="clearfix"><img class="rounded-circle user-image" src="{% static 'assets/images/user/1.jpg'%}"
+                    alt="">
+                  <div class="status-circle away"></div>
+                  <div class="about">
+                    <a href="/user_profile" class="name">Vincent Porter</a>
+                    <div class="status">Hello Name</div>
+                  </div>
+                </li>
+                <li class="clearfix"><img class="rounded-circle user-image" src="{% static 'assets/images/user/2.png'%}"
+                    alt="">
+                  <div class="status-circle online"></div>
+                  <div class="about">
+                    <a href="/user_profile" class="name">Aiden Chavez</a>
+                    <div class="status">Out is my favorite.</div>
+                  </div>
+                </li>
+                <li class="clearfix"><img class="rounded-circle user-image" src="{% static 'assets/images/user/8.jpg'%}"
+                    alt="">
+                  <div class="status-circle online"></div>
+                  <div class="about">
+                    <a href="/user_profile" class="name">Prasanth Anand</a>
+                    <div class="status">Change for anyone.</div>
+                  </div>
+                </li>
+                <li class="clearfix"><img class="rounded-circle user-image" src="{% static 'assets/images/user/4.jpg'%}"
+                    alt="">
+                  <div class="status-circle offline"></div>
+                  <div class="about">
+                    <a href="/user_profile" class="name">Venkata Satyamu</a>
+                    <div class="status">First bun like a sun.</div>
+                  </div>
+                </li>
+                <li class="clearfix"><img class="rounded-circle user-image" src="{% static 'assets/images/user/5.jpg'%}"
+                    alt="">
+                  <div class="status-circle online"></div>
+                  <div class="about">
+                    <a href="/user_profile" class="name">Ginger Johnston</a>
+                    <div class="status">it's my life. Mind it.</div>
+                  </div>
+                </li>
+                <li class="clearfix"><img class="rounded-circle user-image" src="{% static 'assets/images/user/8.jpg'%}"
+                    alt="">
+                  <div class="status-circle offline"></div>
+                  <div class="about">
+                    <a href="/user_profile" class="name">Kori Thomas</a>
+                    <div class="status">Change for anyone.</div>
+                  </div>
+                </li>
+                <li class="clearfix"><img class="rounded-circle user-image" src="{% static 'assets/images/user/1.jpg'%}"
+                    alt="">
+                  <div class="status-circle online"></div>
+                  <div class="about">
+                    <a href="/user_profile" class="name">Vincent Porter</a>
+                    <div class="status">Hello Name</div>
+                  </div>
+                </li>
+                <li class="clearfix"><img class="rounded-circle user-image" src="{% static 'assets/images/user/8.jpg'%}"
+                    alt="">
+                  <div class="status-circle online"></div>
+                  <div class="about">
+                    <a href="/user_profile" class="name">Kori Thomas</a>
+                    <div class="status">Change for anyone.</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Chat left side Ends-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col call-chat-body">
+    <div class="card">
+      <div class="card-body p-0">
+        <div class="row chat-box">
+          <!-- Chat right side start-->
+          <div class="col pr-xl-0 chat-right-aside">
+            <!-- chat start-->
+            <div class="chat">
+              <!-- chat-header start-->
+              <div class="chat-header clearfix">
+                <div class="media align-items-center"> <img class="rounded-circle"
+                    src="{% static 'assets/images/user/8.jpg'%}" alt="">
+                  <div class="media-body">
+                    <div class="about">
+                      <div><a href="/user_profile" class="name">Kori Thomas</a>  <span
+                          class="font-primary f-12">Typing...</span></div>
+                      <div class="status">Last Seen 3:55 PM</div>
+                    </div>
+                  </div>
+                </div>
+                <ul class="list-inline chat-menu-icons">
+                  <li class="list-inline-item"><a href="#"><i class="icon-search"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="icon-clip"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="icon-headphone-alt"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="icon-video-camera"></i></a></li>
+                  <li class="list-inline-item toogle-bar"><a href="javascript:void(0)"><i class="icon-menu"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <!-- chat-header end-->
+              <!-- chat-history start-->
+              <div class="chat-history">
+                <div class="row m-0">
+                  <div class="col text-center p-0 call-content">
+                    <div>
+                      <div class="total-time">
+                        <h2>36 : 56</h2>
+                      </div>
+                      <div class="call-icons">
+                        <ul class="list-inline">
+                          <li class="list-inline-item"><a href="#"><i class="icon-video-camera"></i></a></li>
+                          <li class="list-inline-item"><a href="#"><i class="icon-volume"></i></a></li>
+                          <li class="list-inline-item"><a href="#"><i class="icon-user"></i></a></li>
+                        </ul>
+                      </div>
+                      <button class="btn btn-danger-gradien btn-block btn-lg">END CALL</button>
+                      <div class="receiver-img"><img src="{% static 'assets/images/other-images/receiver-img.jpg'%}"
+                          alt=""></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-7 p-0 caller-img"><img class="img-fluid"
+                      src="{% static 'assets/images/other-images/caller.jpg'%}" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>

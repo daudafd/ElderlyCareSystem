@@ -1,0 +1,112 @@
+{% load static %}
+{% load sass_tags %}
+<!-- Container-fluid starts-->
+<div>
+  <div class="row product-page-main p-0">
+    <div class="col-xl-4 xl-cs-65 box-col-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="product-slider owl-carousel owl-theme" id="sync1">
+            <div class="item"><img src="{% static 'assets/images/ecommerce/01.jpg'%}" alt=""></div>
+            <div class="item"><img src="{% static 'assets/images/ecommerce/02.jpg'%}" alt=""></div>
+            <div class="item"><img src="{% static 'assets/images/ecommerce/03.jpg'%}" alt=""></div>
+            <div class="item"><img src="{% static 'assets/images/ecommerce/04.jpg'%}" alt=""></div>
+            <div class="item"><img src="{% static 'assets/images/ecommerce/05.jpg'%}" alt=""></div>
+            <div class="item"><img src="{% static 'assets/images/ecommerce/06.jpg'%}" alt=""></div>
+            <div class="item"><img src="{% static 'assets/images/ecommerce/07.jpg'%}" alt=""></div>
+            <div class="item"><img src="{% static 'assets/images/ecommerce/08.jpg'%}" alt=""></div>
+          </div>
+          <div class="owl-carousel owl-theme" id="sync2">
+            <div class="item"><img src="{% static 'assets/images/ecommerce/01.jpg'%}" alt=""></div>
+            <div class="item"><img src="{% static 'assets/images/ecommerce/02.jpg'%}" alt=""></div>
+            <div class="item"><img src="{% static 'assets/images/ecommerce/03.jpg'%}" alt=""></div>
+            <div class="item"><img src="{% static 'assets/images/ecommerce/04.jpg'%}" alt=""></div>
+            <div class="item"><img src="{% static 'assets/images/ecommerce/05.jpg'%}" alt=""></div>
+            <div class="item"><img src="{% static 'assets/images/ecommerce/06.jpg'%}" alt=""></div>
+            <div class="item"><img src="{% static 'assets/images/ecommerce/07.jpg'%}" alt=""></div>
+            <div class="item"><img src="{% static 'assets/images/ecommerce/08.jpg'%}" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xxl-5 box-col-6 order-xxl-0 order-1">
+      <div class="card">
+        <div class="card-body">
+          <div class="product-page-details">
+            <h3>Women Pink shirt.</h3>
+          </div>
+          <div class="product-price">$26.00  
+            <del>$350.00 </del>
+          </div>
+          <ul class="product-color">
+            <li class="bg-primary"></li>
+            <li class="bg-secondary"></li>
+            <li class="bg-success"></li>
+            <li class="bg-info"></li>
+            <li class="bg-warning"></li>
+          </ul>
+          <hr>
+          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that.</p>
+          <hr>
+          <div>
+            <table class="product-page-width">
+              <tbody>
+                <tr>
+                  <td> <b>Brand &nbsp;&nbsp;&nbsp;:</b></td>
+                  <td>Pixelstrap</td>
+                </tr>
+                <tr>
+                  <td> <b>Availability &nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;</b></td>
+                  <td class="txt-success">In stock</td>
+                </tr>
+                <tr>
+                  <td> <b>Seller &nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;</b></td>
+                  <td>ABC</td>
+                </tr>
+                <tr>
+                  <td> <b>Fabric &nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;</b></td>
+                  <td>Cotton</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-4">
+              <h6 class="product-title">share it</h6>
+            </div>
+            <div class="col-md-8">
+              <div class="product-icon">
+                <ul class="product-social">
+                  <li class="d-inline-block"><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                  <li class="d-inline-block"><a href="https://accounts.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                  <li class="d-inline-block"><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                  <li class="d-inline-block"><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                  <li class="d-inline-block"><a href="https://rss.app/" target="_blank"><i class="fa fa-rss"></i></a></li>
+                </ul>
+                <form class="d-inline-block f-right"></form>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-4">
+              <h6 class="product-title">Rate Now</h6>
+            </div>
+            <div class="col-md-8">
+              <div class="d-flex">
+                <select id="u-rating-fontawesome" name="rating" autocomplete="off">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select><span>(250 review)</span>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="m-t-15 btn-showcase"><a class="btn btn-primary" href="/cart" title=""> <i class="fa fa-shopping-basket me-1"></i>Add To Cart</a><a class="btn btn-success" href="/checkout" title=""> <i class="fa fa-shopping-cart me-1"></i>Buy Now</a><a class="btn btn-secondary" href="/list_wish"> <i class="fa fa-heart me-1"></i>Add To WishList</a></div>
+        </div>
+      </div>
+    </div>

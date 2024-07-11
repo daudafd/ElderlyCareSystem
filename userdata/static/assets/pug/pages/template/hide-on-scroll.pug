@@ -1,0 +1,60 @@
+- var theme_customizer      = true;
+- var tooltip               = true;
+- var hide_on_scroll        = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          .container-fluid
+            .page-title
+              .row
+                .col-6
+                  h3
+                    | Hide Menu On Scroll
+
+                .col-6
+                  ol.breadcrumb
+                    li.breadcrumb-item
+                      a(href='index.html')                                        
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
+                    li.breadcrumb-item Page Layout
+                    li.breadcrumb-item.active Hide Menu On Scroll
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-sm-12
+                .card
+                  .card-header
+                    h5 Sample Card
+                    p.f-m-light.mt-1 A sample card of the cuba theme.
+                  .card-body
+                    p 
+                      | A qualified expert who is in charge of developing and designing websites is known as a web designer. They make advantage of their knowledge of current web design trends to create websites that are both aesthetically pleasing and user-friendly. Making sure that the websites they develop are responsive—that is, that they easily adjust to multiple screen sizes and devices—is a crucial component of their work. This guarantees that users, regardless of the device they are using, can access and navigate the website efficiently.
+                    p
+                      | A web designer is technically proficient as well as having a good sense of aesthetics and colour. They take care to choose colour palettes that go with the corporate identity and deliver the intended message. The website's efficacy and overall user experience can be significantly impacted by the colour scheme. A web designer can develop a visually appealing website that grabs visitors' attention and improves their surfing experience by adding the right color choices.
+                    p
+                      | Web designers use CSS  as a crucial tool to realise their creative ambitions. The layout, appearance, and style of web pages are managed using this language. To maintain uniformity and coherence throughout the website, a web designer's CSS knowledge is essential. Every component of the website may be altered with CSS, from typefaces and spacing to picture and button placement. By leveraging CSS, a web designer is able to create a visually stunning website that aligns with the client's objectives and enhances the user's interaction with the site.
+                    p
+                      | A web designer not only concentrates on producing websites that are aesthetically pleasing but also pays great attention to the appropriate use of colour. They are aware of the psychology underlying colour and how it might influence people' feelings and behaviours. A web designer may create a unified and aesthetically pleasant experience for visitors by carefully selecting colour schemes that complement the brand and message of the website.
+                    p
+                      | A practitioner with expertise in building attractive and useful websites is known as a web designer. Their primary objective is to create responsive websites, which can adjust to and show properly on various platforms including PCs, tablets, and mobile phones. A web designer gives considerable thought to a website's style, navigation, and general user experience to make sure the target audience will find it easy to use and visually appealing.
+                    p
+                      | Knowledge of user psychology, design concepts, and usability testing techniques are essential for UX designers. Additionally, they must possess strong communication skills with both technical and user stakeholders.training and education The educational road to become a UX designer is not one-size-fits-all. The majority of UX designers, however, have degrees in design, computer science, or human-computer interaction. Additionally, there are several UX design courses and bootcamps that are offered both online and in person.Career prospects: Job prospects for UX designers are excellent. UX designers' employment is expected to increase by 13% between 2020 and 2030, according to the Bureau of Labour Statistics, which is substantially faster than the average for all occupations.Making a product or service functional, pleasurable, and accessible is the responsibility of the UX designer. Although many businesses create user experiences, the phrase is frequently connected to digital design for websites and mobile applications. The broad design phases tend to remain the same, even though the actual process changes from product to product and firm to company.
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

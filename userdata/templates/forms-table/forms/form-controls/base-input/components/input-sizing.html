@@ -1,0 +1,84 @@
+{% load static %}
+{% load sass_tags %}
+
+<div class="card">
+  <div class="card-header">
+    <h5>Input sizing</h5>
+  </div>
+  <form class="form theme-form"> {% csrf_token %}
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <div class="mb-3">
+            <label class="form-label" for="colFormLabelSm26">Large input</label>
+            <input class="form-control form-control-lg" id="colFormLabelSm26" type="text"
+              placeholder="col-form-label-lg">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="mb-3">
+            <label class="form-label" for="exampleInputPassword27">Default input</label>
+            <input class="form-control" id="exampleInputPassword27" type="text" placeholder="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="mb-3">
+            <label class="form-label" for="colFormLabelSm28">Small input</label>
+            <input class="form-control form-control-sm" id="colFormLabelSm28" type="text"
+              placeholder="col-form-label-sm">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="mb-3">
+            <label class="form-label" for="exampleFormControlSelect29">Large select</label>
+            <select class="form-select form-control-lg digits" id="exampleFormControlSelect29">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="mb-3">
+            <label class="form-label" for="exampleFormControlSelect30">Default select</label>
+            <select class="form-select digits" id="exampleFormControlSelect30">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div>
+            <label class="form-label" for="exampleFormControlSelect31">Small select</label>
+            <select class="form-select form-control-sm digits" id="exampleFormControlSelect31">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-end">
+      <button class="btn btn-primary" type="submit">Submit</button>
+      <input class="btn btn-light" type="reset" value="Cancel">
+    </div>
+  </form>
+</div>

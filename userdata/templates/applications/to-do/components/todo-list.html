@@ -1,0 +1,127 @@
+<!-- Container-fluid starts-->
+<div class="row">
+  <div class="col-xl-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>To-Do</h5>
+      </div>
+      <div class="card-body pt-0">
+        <div class="todo">
+          <div class="todo-list-wrapper">
+            <div class="todo-list-container">
+              <div class="mark-all-tasks">
+
+                <div class="mark-all-tasks-container">
+
+
+                  {% if completedTasks == False %}
+
+                  {% if completedTasks == True %}
+                  <span class="mark-all-btn move-down" id="mark-all-finished" role="button">
+                    {% else %}
+                    <span class="mark-all-btn" id="mark-all-finished" role="button">
+                      <a href="/markAllComplete">
+                        <span class=" btn-label">Mark all as finished</span>
+                        <span class="action-box completed"><i class="icon"><i class="icon-check"></i></i></span>
+                      </a>
+                    </span>
+                    {% endif %}
+
+                    {% else %}
+
+                    {% if completedTasks == False %}
+                    <span class="mark-all-btn move-down" id="mark-all-incomplete" role="button">
+                      {% else %}
+                      <span class="mark-all-btn" id="mark-all-incomplete" role="button">
+                        <a href="/markAllIncomplete">
+                          <span class=" btn-label">Mark all as Incomplete</span>
+                          <span class="action-box"><i class="icon"><i class="icon-check"></i></i></span>
+                        </a>
+                      </span>
+                      {% endif %}
+
+                      {% endif %}
+                </div>
+
+              </div>
+              <div class="todo-list-body">
+                <ul id="todo-list">
+
+
+                  {% for task in tasks %}
+                  {% if task.complete == True %}
+                  <li class="task completed">
+                    {% else %}
+                  <li class="task">
+                    {% endif %}
+                    <div class="task-container">
+                      <h4 class="task-label"> {{ task }} </h4>
+                      <span class="task-action-btn">
+                        <span class="action-box large delete-btn" title="Delete Task">
+
+                          <form method="POST" action="">{% csrf_token %}
+                            <a href="{%url 'delete' task.id %}"><i class="icon"><i class="icon-trash"></i></i></a>
+                          </form>
+
+                        </span>
+
+                        <span class="action-box large complete-btn" title="Mark Complete">
+
+                          <form method="POST" action="">{% csrf_token %}
+                            <a href="/updateTask/{{task.id}}"><i class="icon"><i class="icon-check"></i></i></a>
+                          </form>
+
+                        </span>
+
+                      </span>
+
+                    </div>
+                  </li>
+                  {% endfor %}
+
+
+
+
+
+                </ul>
+              </div>
+              <div class="todo-list-footer">
+                <div class="add-task-btn-wrapper"><span class="add-task-btn">
+                    <button class="btn btn-primary"><i class="icon-plus"></i> Add new task</button></span></div>
+                <div class="new-task-wrapper">
+
+                  <form method="POST" action="/to_do_database">
+                    {% csrf_token %}
+                    {{ form.title }}
+                    <span class="btn btn-danger cancel-btn" id="close-task-panel">Close</span>
+                    <button class="btn btn-success ms-3 add-new-task-btn" id="add-task" type="submit">Add Task</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="notification-popup hide">
+            <p><span class="task"></span><span class="notification-text"></span></p>
+          </div>
+        </div>
+        <!-- HTML Template for tasks-->
+        <script id="task-template" type="text/template">
+            <li class="task">
+            <div class="task-container">
+            <h4 class="task-label"></h4>
+            <span class="task-action-btn">
+            <span class="action-box large delete-btn" title="Delete Task">
+            <i class="icon"><i class="icon-trash"></i></i>
+            </span>
+            <span class="action-box large complete-btn" title="Mark Complete">
+            <i class="icon"><i class="icon-check"></i></i>
+            </span>
+            </span>
+            </div>
+            </li>
+          </script>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Container-fluid Ends-->

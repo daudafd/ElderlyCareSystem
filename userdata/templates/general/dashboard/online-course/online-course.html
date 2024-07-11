@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+{% block css %}
+<!-- Plugins css start-->
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/date-picker.scss'%}">
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+  <div class="container-fluid">
+        {% include "layout/breadcrumb.html" %}
+        <div class="row">
+            {% include "general/dashboard/online-course/components/top.html" %}
+            {% include "general/dashboard/online-course/components/center.html" %}
+            {% include "general/dashboard/online-course/components/bottom.html" %}
+        
+        </div>
+      </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+   
+
+    <script src="{% static 'assets/js/chart/apex-chart/apex-chart.js'%}"></script>
+    <script src="{% static 'assets/js/chart/apex-chart/stock-prices.js'%}"></script>
+    <script src="{% static 'assets/js/chart/apex-chart/moment.min.js'%}"></script>
+    <script src="{% static 'assets/js/datepicker/date-picker/datepicker.js'%}"></script>
+    <script src="{% static 'assets/js/datepicker/date-picker/datepicker.en.js'%}"></script>
+    <script src="{% static 'assets/js/datepicker/date-picker/datepicker.custom.js'%}"></script>
+    <script src="{% static 'assets/js/dashboard/dashboard_3.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

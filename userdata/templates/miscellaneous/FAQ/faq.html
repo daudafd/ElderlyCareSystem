@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+  <div class="container-fluid">
+    {% include "layout/breadcrumb.html" %}
+    <div class="faq-wrap">
+      <div class="row">
+        {% include "miscellaneous/FAQ/components/faq.html" %}
+        {% include "miscellaneous/FAQ/components/quick-questions1.html" %}
+        {% include "miscellaneous/FAQ/components/quick-questions2.html" %}
+        {% include "miscellaneous/FAQ/components/featured.html" %}
+        {% include "miscellaneous/FAQ/components/articles.html" %}
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/height-equal.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

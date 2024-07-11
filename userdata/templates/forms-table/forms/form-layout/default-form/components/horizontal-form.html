@@ -1,0 +1,92 @@
+{% load static %}
+{% load sass_tags %}
+
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-header">
+      <h5>Horizontal Form Layout</h5><span>Using the <a href="#">card</a>
+        component, you can extend the default collapse behavior to create
+        an accordion.</span>
+    </div>
+    <div class="card-body">
+      <form class="theme-form">
+        <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label" for="inputEmail3">Email</label>
+          <div class="col-sm-9">
+            <input class="form-control" id="inputEmail3" type="email" placeholder="Email">
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label" for="inputPassword3">Password</label>
+          <div class="col-sm-9">
+            <input class="form-control" id="inputPassword3" type="password" placeholder="Password">
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label" for="inputPassword3">Contact Number</label>
+          <div class="col-sm-9">
+            <input class="form-control" id="inputnumber" type="number" placeholder="Contact">
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label" for="inputPassword3">Company name</label>
+          <div class="col-sm-9">
+            <input class="form-control" id="url" type="text" placeholder="Company name">
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label" for="inputPassword3">Website</label>
+          <div class="col-sm-9">
+            <input class="form-control" id="Website" type="url" placeholder="Website">
+          </div>
+        </div>
+        <fieldset class="mb-3">
+          <div class="row">
+            <label class="col-form-label col-sm-3 pt-0">Radios</label>
+            <div class="col-sm-9">
+              <div class="form-check radio radio-primary">
+                <input class="form-check-input" id="radio11" type="radio" name="radio1" value="option1">
+                <label class="form-check-label" for="radio11">Option 1</label>
+              </div>
+              <div class="form-check radio radio-primary">
+                <input class="form-check-input" id="radio22" type="radio" name="radio1" value="option1">
+                <label class="form-check-label" for="radio22">Option 2</label>
+              </div>
+              <div class="form-check radio radio-primary">
+                <input class="form-check-input" id="radio33" type="radio" name="radio1" value="option1" disabled="">
+                <label class="form-check-label" for="radio33">Disabled</label>
+              </div>
+              <div class="form-check radio radio-primary">
+                <input class="form-check-input" id="radio44" type="radio" name="radio1" value="option1" checked="">
+                <label class="form-check-label" for="radio44">Option 3</label>
+              </div>
+              <div class="form-check radio radio-primary">
+                <input class="form-check-input" id="radio55" type="radio" name="radio1" value="option1" checked="">
+                <label class="form-check-label" for="radio44">Option 4</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="row mb-0">
+          <label class="col-sm-3 col-form-label pb-0">Checkboxes</label>
+          <div class="col-sm-9">
+            <div class="mb-0">
+              <div class="form-check form-check-inline checkbox checkbox-primary">
+                <input class="form-check-input" id="inline-form-1" type="checkbox">
+                <label class="form-check-label" for="inline-form-1">Option 1</label>
+              </div>
+              <div class="form-check form-check-inline checkbox checkbox-primary">
+                <input class="form-check-input" id="inline-form-2" type="checkbox">
+                <label class="form-check-label" for="inline-form-2">Option 2</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="card-footer text-end">
+      <button class="btn btn-primary">Submit</button>
+      <button class="btn btn-secondary">Cancel</button>
+    </div>
+  </div>
+</div>

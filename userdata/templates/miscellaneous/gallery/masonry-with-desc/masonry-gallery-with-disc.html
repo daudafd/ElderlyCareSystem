@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/photoswipe.scss' %}">
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+            <div class="row">
+                  <div class="col-sm-12">
+                        <div class="card">
+                              <div class="card-header">
+                                    <h5>MASONRY GALLERY WITH DESCRIPTION</h5>
+                              </div>
+                              {% include "miscellaneous/gallery/masonry-with-desc/components/masonry-gallery.html" %}
+                              {% include "miscellaneous/gallery/masonry-with-desc/components/card.html" %}
+
+                              <!-- Root element of PhotoSwipe. Must have class pswp.-->
+
+                        </div>
+                  </div>
+            </div>
+      </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/isotope.pkgd.js'%}"></script>
+<script src="{% static 'assets/js/photoswipe/photoswipe.min.js'%}"></script>
+<script src="{% static 'assets/js/photoswipe/photoswipe-ui-default.min.js'%}"></script>
+<script src="{% static 'assets/js/photoswipe/photoswipe.js'%}"></script>
+<script src="{% static 'assets/js/masonry-gallery.js'%}"></script>
+<script src="{% static 'assets/js/tooltip-init.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

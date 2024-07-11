@@ -1,0 +1,135 @@
+{% load static %}
+{% load sass_tags %}
+<div class="fade tab-pane" id="pills-tasks" role="tabpanel" aria-labelledby="pills-tasks-tab">
+  <div class="card mb-0">
+    <div class="card-header d-flex">
+      <h6 class="mb-0">My tasks</h6><a href="#"><i class="me-2" data-feather="printer"></i>Print</a>
+    </div>
+    <div class="card-body p-0">
+      <div class="taskadd">
+        <div class="table-responsive">
+          <table class="table">
+            <tr>
+              <td>
+                <h6 class="task_title_0">Task name</h6>
+                <p class="project_name_0">General</p>
+              </td>
+              <td>
+                <p class="task_desc_0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been</p>
+              </td>
+              <td><a class="me-2" href="#"><i data-feather="link"></i></a><a href="#"><i
+                    data-feather="more-horizontal"></i></a></td>
+              <td><a href="#"><i data-feather="trash-2"></i></a></td>
+            </tr>
+            <tr>
+              <td>
+                <h6 class="task_title_0">Task name</h6>
+                <p class="project_name_0">General</p>
+              </td>
+              <td>
+                <p class="task_desc_0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been</p>
+              </td>
+              <td><a class="me-2" href="#"><i data-feather="link"></i></a><a href="#"><i
+                    data-feather="more-horizontal"></i></a></td>
+              <td><a href="#"><i data-feather="trash-2"></i></a></td>
+            </tr>
+            <tr>
+              <td>
+                <h6 class="task_title_0">Task name</h6>
+                <p class="project_name_0">General</p>
+              </td>
+              <td>
+                <p class="task_desc_0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been</p>
+              </td>
+              <td><a class="me-2" href="#"><i data-feather="link"></i></a><a href="#"><i
+                    data-feather="more-horizontal"></i></a></td>
+              <td><a href="#"><i data-feather="trash-2"></i></a></td>
+            </tr>
+            <tr>
+              <td>
+                <h6 class="task_title_0">Task name</h6>
+                <p class="project_name_0">General</p>
+              </td>
+              <td>
+                <p class="task_desc_0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been</p>
+              </td>
+              <td><a class="me-2" href="#"><i data-feather="link"></i></a><a href="#"><i
+                    data-feather="more-horizontal"></i></a></td>
+              <td><a href="#"><i data-feather="trash-2"></i></a></td>
+            </tr>
+            <tr>
+              <td>
+                <h6 class="task_title_0">Task name</h6>
+                <p class="project_name_0">General</p>
+              </td>
+              <td>
+                <p class="task_desc_0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been</p>
+              </td>
+              <td><a class="me-2" href="#"><i data-feather="link"></i></a><a href="#"><i
+                    data-feather="more-horizontal"></i></a></td>
+              <td><a href="#"><i data-feather="trash-2"></i></a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fade tab-pane" id="pills-notification" role="tabpanel" aria-labelledby="pills-notification-tab">
+  <div class="card mb-0">
+    <div class="card-header d-flex">
+      <h6 class="mb-0">Notification</h6><a href="#"><i class="me-2" data-feather="printer"></i>Print</a>
+    </div>
+    <div class="card-body">
+      <div class="details-bookmark text-center"><span>No tasks found.</span></div>
+    </div>
+  </div>
+</div>
+<div class="fade tab-pane" id="pills-newsletter" role="tabpanel" aria-labelledby="pills-newsletter-tab">
+  <div class="card mb-0">
+    <div class="card-header d-flex">
+      <h6 class="mb-0">Newsletter</h6><a href="#"><i class="me-2" data-feather="printer"></i>Print</a>
+    </div>
+    <div class="card-body">
+      <div class="details-bookmark text-center"><span>No tasks found.</span></div>
+    </div>
+  </div>
+</div>
+<div class="modal fade modal-bookmark" id="createtag" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Create Tag</h5>
+        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="form-bookmark needs-validation" novalidate=""> {% csrf_token %}
+          <div class="row">
+            <div class="mb-3 mt-0 col-md-12">
+              <label>Tag Name</label>
+              <input class="form-control" type="text" required="" autocomplete="off">
+            </div>
+            <div class="mt-0 col-md-12">
+              <label>Tag color</label>
+              <input class="form-color d-block" type="color" value="#563d7c">
+            </div>
+          </div>
+          <button class="btn btn-secondary" type="button">Save</button>
+          <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

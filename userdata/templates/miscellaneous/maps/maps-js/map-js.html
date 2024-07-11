@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/mapsjs-ui.scss' %}">
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+            <div class="row">
+
+                  {% include "miscellaneous/maps/maps-js/components/map1-4.html" %}
+                  {% include "miscellaneous/maps/maps-js/components/map5-8.html" %}
+                  {% include "miscellaneous/maps/maps-js/components/map9-12.html" %}
+                  {% include "miscellaneous/maps/maps-js/components/map13-16.html" %}
+
+            </div>
+      </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/tooltip-init.js'%}"></script>
+<script src="{% static 'assets/js/map-js/mapsjs-core.js'%}"></script>
+<script src="{% static 'assets/js/map-js/mapsjs-service.js'%}"></script>
+<script src="{% static 'assets/js/map-js/mapsjs-ui.js'%}"></script>
+<script src="{% static 'assets/js/map-js/mapsjs-mapevents.js'%}"></script>
+<script src="{% static 'assets/js/map-js/custom.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

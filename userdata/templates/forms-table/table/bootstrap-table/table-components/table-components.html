@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+            <div class="row">
+
+                  {% include "forms-table/table/bootstrap-table/table-components/components/ui-components.html" %}
+                  {% include "forms-table/table/bootstrap-table/table-components/components/alerts.html" %}
+                  {% include "forms-table/table/bootstrap-table/table-components/components/progressbar.html" %}
+                  {% include "forms-table/table/bootstrap-table/table-components/components/checkbox.html" %}
+                  {% include "forms-table/table/bootstrap-table/table-components/components/radio-buttons.html" %}
+                  {% include "forms-table/table/bootstrap-table/table-components/components/select.html" %}
+                  {% include "forms-table/table/bootstrap-table/table-components/components/input.html" %}
+                  {% include "forms-table/table/bootstrap-table/table-components/components/badges.html" %}
+                  {% include "forms-table/table/bootstrap-table/table-components/components/tooltip-triggers.html" %}
+                  {% include "forms-table/table/bootstrap-table/table-components/components/switch.html" %}
+
+            </div>
+      </div>
+
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<!-- Plugins JS Ends-->
+{% endblock %}

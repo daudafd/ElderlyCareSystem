@@ -1,0 +1,205 @@
+{% load static %}
+<div class="col-xl-3 col-sm-6"> 
+    <div class="card social-widget">
+      <div class="card-body">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center gap-2">
+            <div class="social-icons"><img src="{% static 'assets/images/dashboard-5/social/1.png'%}" alt="facebook icon"></div><span>Facebook</span>
+          </div><span class="font-success f-12 d-xxl-block d-xl-none">+22.9%</span>
+        </div>
+        <div class="social-content">
+          <div> 
+            <h5 class="mb-1">12,098</h5><span class="f-light">Followers</span>
+          </div>
+          <div class="social-chart">
+            <div id="radial-facebook"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-sm-6"> 
+    <div class="card social-widget">
+      <div class="card-body">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center gap-2">
+            <div class="social-icons"><img src="{% static 'assets/images/dashboard-5/social/3.png'%}" alt="twitter icon"></div><span>Twitter</span>
+          </div><span class="font-success f-12 d-xxl-block d-xl-none">+14.09%</span>
+        </div>
+        <div class="social-content">
+          <div> 
+            <h5 class="mb-1">12,564</h5><span class="f-light">Followers</span>
+          </div>
+          <div class="social-chart">
+            <div id="radial-twitter"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-sm-6"> 
+    <div class="card social-widget">
+      <div class="card-body">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center gap-2">
+            <div class="social-icons"><img src="{% static 'assets/images/dashboard-5/social/2.png'%}" alt="instagram icon"></div><span>Instagram</span>
+          </div><span class="font-success f-12 d-xxl-block d-xl-none">+27.4%</span>
+        </div>
+        <div class="social-content">
+          <div> 
+            <h5 class="mb-1">15,080</h5><span class="f-light">Followers</span>
+          </div>
+          <div class="social-chart">
+            <div id="radial-instagram"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-sm-6"> 
+    <div class="card social-widget">
+      <div class="card-body">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center gap-2">
+            <div class="social-icons"><img src="{% static 'assets/images/dashboard-5/social/4.png'%}" alt="you tube icon"></div><span>Youtube</span>
+          </div><span class="font-success f-12 d-xxl-block d-xl-none">+22.9%</span>
+        </div>
+        <div class="social-content">
+          <div> 
+            <h5 class="mb-1">68,954</h5><span class="f-light">Followers</span>
+          </div>
+          <div class="social-chart">
+            <div id="radial-youtube"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xxl-5 col-xl-8 box-col-12">
+    <div class="row g-sm-3 height-equal-2 widget-charts">
+      <div class="col-sm-6"> 
+        <div class="card small-widget mb-sm-0">
+          <div class="card-body primary"> <span class="f-light">New Orders</span>
+            <div class="d-flex align-items-end gap-1">
+              <h4>2,435</h4><span class="font-primary f-12 f-w-500"><i class="icon-arrow-up"></i><span>+50%</span></span>
+            </div>
+            <div class="bg-gradient"> 
+              <svg class="stroke-icon svg-fill">
+                <use href="{% static 'assets/svg/icon-sprite.svg'%}#new-order"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6"> 
+        <div class="card small-widget mb-sm-0"> 
+          <div class="card-body warning"><span class="f-light">New Customers</span>
+            <div class="d-flex align-items-end gap-1">
+              <h4>2,908</h4><span class="font-warning f-12 f-w-500"><i class="icon-arrow-up"></i><span>+20%</span></span>
+            </div>
+            <div class="bg-gradient"> 
+              <svg class="stroke-icon svg-fill">
+                <use href="{% static 'assets/svg/icon-sprite.svg'%}#customers"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6"> 
+        <div class="card small-widget mb-sm-0"> 
+          <div class="card-body secondary"><span class="f-light">Average Sale</span>
+            <div class="d-flex align-items-end gap-1">
+              <h4>$389k</h4><span class="font-secondary f-12 f-w-500"><i class="icon-arrow-down"></i><span>-10%</span></span>
+            </div>
+            <div class="bg-gradient"> 
+              <svg class="stroke-icon svg-fill">
+                <use href="{% static 'assets/svg/icon-sprite.svg'%}#sale"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6"> 
+        <div class="card small-widget mb-sm-0"> 
+          <div class="card-body success"><span class="f-light">Gross Profit</span>
+            <div class="d-flex align-items-end gap-1">
+              <h4>$3,908</h4><span class="font-success f-12 f-w-500"><i class="icon-arrow-up"></i><span>+80%</span></span>
+            </div>
+            <div class="bg-gradient"> 
+              <svg class="stroke-icon svg-fill">
+                <use href="{% static 'assets/svg/icon-sprite.svg'%}#profit"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6"> 
+        <div class="card widget-1 widget-with-chart mb-xl-0">
+          <div class="card-body"> 
+            <div> 
+              <h4 class="mb-1">1,80k</h4><span class="f-light">Orders</span>
+            </div>
+            <div class="order-chart"> 
+              <div id="orderchart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6"> 
+        <div class="card widget-1 widget-with-chart mb-xl-0">
+          <div class="card-body"> 
+            <div> 
+              <h4 class="mb-1">6,90k</h4><span class="f-light">Profit</span>
+            </div>
+            <div class="profit-chart"> 
+              <div id="profitchart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xxl-3 col-xl-4 col-sm-6 box-col-6"> 
+    <div class="card balance-box height-equal-2">
+      <div class="card-body d-flex align-items-center justify-content-center">
+        <div class="balance-profile">
+          <div class="balance-img"><img src="{% static 'assets/images/dashboard-4/user.png'%}" alt="user vector"><a class="edit-icon" href="user-profile.html">
+              <svg>
+                <use href="{% static 'assets/svg/icon-sprite.svg'%}#pencil"></use>
+              </svg></a></div><span class="f-light d-block">Your Balance </span>
+          <h5 class="mt-1">$768,987.90</h5>
+          <ul> 
+            <li>
+              <div class="balance-item danger"> 
+                <div class="balance-icon-wrap"> 
+                  <div class="balance-icon"><i data-feather="arrow-down-right"></i></div>
+                </div>
+                <div> <span class="f-12 f-light">Investment  </span>
+                  <h5>78.8K</h5><span class="badge badge-light-danger rounded-pill">-11.67%</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="balance-item success">
+                <div class="balance-icon-wrap"> 
+                  <div class="balance-icon"><i data-feather="arrow-up-right"></i></div>
+                </div>
+                <div> <span class="f-12 f-light">Cash Back</span>
+                  <h5>19.7K</h5><span class="badge badge-light-success rounded-pill">+10.67%</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-4 d-xxl-block d-xl-none col-sm-6 box-col-6">  
+    <div class="card height-equal-2"> 
+      <div class="card-body">
+        <div class="default-datepicker">
+          <div class="datepicker-here" data-language="en"></div>
+        </div>
+      </div>
+    </div>
+  </div>

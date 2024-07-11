@@ -1,0 +1,59 @@
+{% load static %}
+
+<div class="row">
+    <div class="col-md-12 box-col-12">
+        <div class="card o-hidden">
+            <div class="card-header">
+                <h5>Monthly History</h5>
+            </div>
+            <div class="bar-chart-widget">
+                <div class="bottom-content card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="chart-widget4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6 col-lg-12 box-col-6 xl-50">
+        <div class="card">
+            <div class="card-header">
+                <h5>Skill Status</h5>
+            </div>
+            <div class="card-body">
+                <div class="chart-container skill-chart">
+                    <div id="circlechart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6 col-lg-12 box-col-6 xl-50">
+        <div class="card">
+            <div class="card-header">
+                <div class="header-top">
+                    <h5>Order Status</h5>
+                    <div class="card-header-right-icon">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" id="dropdownMenuButton" type="button"
+                                data-bs-toggle="dropdown">Today</button>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton"><a
+                                    class="dropdown-item" href="#">Today</a><a class="dropdown-item"
+                                    href="#">Tomorrow</a><a class="dropdown-item" href="#">Yesterday</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="chart-container progress-chart">
+                    <div id="progress1"></div>
+                    <div id="progress2"></div>
+                    <div id="progress3"></div>
+                    <div id="progress4"></div>
+                    <div id="progress5"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

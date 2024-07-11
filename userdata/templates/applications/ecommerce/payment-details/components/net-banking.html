@@ -1,0 +1,40 @@
+{% load static %}
+{% load sass_tags %}
+<div class="col-xxl-4 col-xl-6 box-col-6">
+  <div class="card">
+    <div class="card-header py-4">
+      <h5>Net Banking</h5>
+    </div>
+    <div class="card-body">
+      <form class="theme-form row"> {% csrf_token %}
+        <div class="mb-3 col-12">
+          <input class="form-control" type="text" placeholder="AC Holder name">
+        </div>
+        <div class="mb-3 col-12">
+          <input class="form-control" type="text" placeholder="Account number">
+        </div>
+        <div class="mb-3 col-6 p-r-0">
+          <select class="form-select" size="1">
+            <option>Select Bank</option>
+            <option>SBI</option>
+            <option>ICICI</option>
+            <option>KOTAK</option>
+            <option>BOB</option>
+          </select>
+        </div>
+        <div class="mb-3 col-6">
+          <input class="form-control" type="text" placeholder="ICFC code">
+        </div>
+        <div class="mb-3 col-12">
+          <input class="form-control" type="number" placeholder="Enter mobile number">
+        </div>
+        <div class="mb-3 col-12">
+          <input class="form-control" type="text" placeholder="Other Details">
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary btn-block" type="button" title="">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

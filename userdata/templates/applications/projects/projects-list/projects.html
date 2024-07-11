@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/animate.scss' %}">
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+            <div class="row project-cards">
+                  {% include "applications/projects/projects-list/components/projects-list-1.html" %}
+                  <div class="col-sm-12">
+                        <div class="card">
+                              <div class="card-body">
+                                    <div class="tab-content" id="top-tabContent">
+                                          {% include "applications/projects/projects-list/components/projects-list-2.html" %} 
+                                          {% include "applications/projects/projects-list/components/projects-list-3.html" %}
+                                           {% include "applications/projects/projects-list/components/projects-list-4.html" %}
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/typeahead/handlebars.js'%}"></script>
+<script src="{% static 'assets/js/typeahead/typeahead.bundle.js'%}"></script>
+<script src="{% static 'assets/js/typeahead/typeahead.custom.js'%}"></script>
+<script src="{% static 'assets/js/typeahead-search/handlebars.js'%}"></script>
+<script src="{% static 'assets/js/typeahead-search/typeahead-custom.js'%}"></script>
+<script src="{% static 'assets/js/tooltip-init.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

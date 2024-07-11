@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+            <div class="row">
+
+                  {% include "forms-table/table/bootstrap-table/styling-table/components/defult-styling.html" %}
+                  {% include "forms-table/table/bootstrap-table/styling-table/components/table-head-options.html" %}
+                  {% include "forms-table/table/bootstrap-table/styling-table/components/table-head.html" %}
+                  {% include "forms-table/table/bootstrap-table/styling-table/components/table-footer.html" %}
+                  {% include "forms-table/table/bootstrap-table/styling-table/components/custom-table-color.html" %}
+                  {% include "forms-table/table/bootstrap-table/styling-table/components/custom-table.html" %}
+
+            </div>
+      </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/tooltip-init.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

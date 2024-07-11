@@ -1,0 +1,90 @@
+{% load static %}
+{% load sass_tags %}
+
+<div class="row">
+  <div class="col-xl-3 box-col-6 pe-0">
+    <div class="file-sidebar">
+      <div class="card">
+        <div class="card-body">
+          <ul>
+            <li>
+              <div class="btn btn-primary"><i data-feather="home"> </i>Home </div>
+            </li>
+            <li>
+              <div class="btn btn-light"><i data-feather="folder"></i>All </div>
+            </li>
+            <li>
+              <div class="btn btn-light"><i data-feather="clock"></i>Recent </div>
+            </li>
+            <li>
+              <div class="btn btn-light"><i data-feather="star"></i>Starred </div>
+            </li>
+            <li>
+              <div class="btn btn-light"><i data-feather="alert-circle"></i>Recovery </div>
+            </li>
+            <li>
+              <div class="btn btn-light"><i data-feather="trash-2"></i>Deleted </div>
+            </li>
+          </ul>
+          <hr>
+          <ul>
+            <li>
+              <div class="btn btn-outline-primary"><i data-feather="database"> </i>Storage </div>
+              <div class="m-t-15">
+                <div class="progress sm-progress-bar mb-1">
+                  <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p>25 GB of 100 GB used</p>
+              </div>
+            </li>
+          </ul>
+          <hr>
+          <ul>
+            <li>
+              <div class="btn btn-outline-primary"><i data-feather="grid"> </i>Pricing plan</div>
+            </li>
+            <li>
+              <div class="pricing-plan">
+                <h6>Trial Version </h6>
+                <h5>FREE</h5>
+                <p> 100 GB Space</p>
+                <div class="btn btn-outline-primary btn-xs">Selected</div><img class="bg-img"
+                  src="{% static 'assets/images/dashboard/folder.png'%}" alt="">
+              </div>
+            </li>
+            <li>
+              <div class="pricing-plan">
+                <h6>Premium</h6>
+                <h5>$5/month</h5>
+                <p> 200 GB Space</p>
+                <div class="btn btn-outline-primary btn-xs">Contact Us</div><img class="bg-img"
+                  src="{% static 'assets/images/dashboard/folder1.png'%}" alt="">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-9 col-md-12 box-col-12">
+    <div class="file-content">
+      <div class="card">
+        <div class="card-header">
+          <div class="media">
+            <form class="form-inline" action="#" method="get">
+              <div class="form-group mb-0"> <i class="fa fa-search"></i>
+                <input class="form-control-plaintext" type="text" placeholder="Search...">
+              </div>
+            </form>
+            <div class="media-body text-end">
+              <form class="d-inline-flex" action="#" method="POST" enctype="multipart/form-data" name="myForm">
+                <div class="btn btn-primary" onclick="getFile()"> <i data-feather="plus-square"></i>Add New</div>
+                <div style="height: 0px;width: 0px; overflow:hidden;">
+                  <input id="upfile" type="file" onchange="sub(this)">
+                </div>
+              </form>
+              <div class="btn btn-outline-primary ms-2"><i data-feather="upload"> </i>Upload </div>
+            </div>
+          </div>
+        </div>

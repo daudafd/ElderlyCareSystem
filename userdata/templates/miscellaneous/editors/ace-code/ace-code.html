@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+
+            {% include "miscellaneous/editors/ace-code/components/ace-code.html" %}
+
+      </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/editor/ace-editor/ace.js'%}"></script>
+<script src="{% static 'assets/js/editor/ace-editor/ace-custom.js'%}"></script>
+<script src="{% static 'assets/js/editor/ace-editor/mode-css.js'%}"></script>
+<script src="{% static 'assets/js/editor/ace-editor/mode-html.js'%}"></script>
+<script src="{% static 'assets/js/editor/ace-editor/mode-javascript.js'%}"></script>
+<script src="{% static 'assets/js/editor/ace-editor/mode-php.js'%}"></script>
+<script src="{% static 'assets/js/editor/ace-editor/theme-monokai.js'%}"></script>
+<script src="{% static 'assets/js/editor/ace-editor/worker-css.js'%}"></script>
+<script src="{% static 'assets/js/editor/ace-editor/worker-html.js'%}"></script>
+<script src="{% static 'assets/js/editor/ace-editor/worker-javascript.js'%}"></script>
+<script src="{% static 'assets/js/editor/ace-editor/worker-php.js'%}"></script>
+<script src="{% static 'assets/js/tooltip-init.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

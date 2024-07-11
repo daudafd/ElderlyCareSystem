@@ -1,0 +1,54 @@
+{% load static %}
+{% load sass_tags %}
+
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-header">
+      <h5>Mega form</h5>
+    </div>
+    <div class="card-body">
+      <form class="theme-form mega-form">
+        <h6>Account Information</h6>
+        <div class="mb-3">
+          <label class="col-form-label">Your Name</label>
+          <input class="form-control" type="text" placeholder="your Name">
+        </div>
+        <div class="mb-3">
+          <label class="col-form-label">Email Address</label>
+          <input class="form-control" type="email" placeholder="Enter email">
+        </div>
+        <div class="mb-3">
+          <label class="col-form-label">Contact Number</label>
+          <input class="form-control" type="Number" placeholder="Enter contact number">
+        </div>
+        <hr class="mt-4 mb-4">
+        <h6>Company Information</h6>
+        <div class="mb-3">
+          <label class="col-form-label">Company Name</label>
+          <input class="form-control" type="text" placeholder="Company Name">
+        </div>
+        <div class="mb-3">
+          <label class="col-form-label">Website</label>
+          <input class="form-control" type="text" placeholder="Website">
+        </div>
+      </form>
+      <hr class="mt-4 mb-4">
+      <h6 class="pb-3 mb-0">Billing Information</h6>
+      <form class="form-space theme-form row">
+        <div class="col-auto">
+          <input class="form-control" type="text" placeholder="Name On Card">
+        </div>
+        <div class="col-auto">
+          <input class="form-control" type="text" name="inputPassword" placeholder="Card Number">
+        </div>
+        <div class="col-auto">
+          <input class="form-control" type="text" name="inputPassword" placeholder="Zip Code">
+        </div>
+      </form>
+    </div>
+    <div class="card-footer text-end">
+      <button class="btn btn-primary">Submit</button>
+      <button class="btn btn-secondary">Cancel</button>
+    </div>
+  </div>
+</div>

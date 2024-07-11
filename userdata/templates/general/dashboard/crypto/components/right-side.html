@@ -1,0 +1,195 @@
+{% load static %}
+<div class="col-xxl-3 box-col-12">
+    <div class="row box-order">
+      <div class="col-xxl-12 col-sm-6 box-col-6">
+        <div class="card balance-box">
+          <div class="card-body">
+            <div class="balance-profile">
+              <div class="balance-img"><img src="{% static 'assets/images/dashboard-4/user.png'%}" alt="user vector"><a class="edit-icon" href="user-profile.html">
+                  <svg>
+                    <use href="{% static 'assets/svg/icon-sprite.svg'%}#pencil"></use>
+                  </svg></a></div><span class="f-light d-block">Your Balance </span>
+              <h5 class="mt-1">$768,987.90</h5>
+              <ul> 
+                <li>
+                  <div class="balance-item danger"> 
+                    <div class="balance-icon-wrap"> 
+                      <div class="balance-icon"><i data-feather="arrow-down-right"></i></div>
+                    </div>
+                    <div> <span class="f-12 f-light">Investment  </span>
+                      <h5>78.8K</h5><span class="badge badge-light-danger rounded-pill">-11.67%</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="balance-item success">
+                    <div class="balance-icon-wrap"> 
+                      <div class="balance-icon"><i data-feather="arrow-up-right"></i></div>
+                    </div>
+                    <div> <span class="f-12 f-light">Cash Back</span>
+                      <h5>19.7K</h5><span class="badge badge-light-success rounded-pill">+10.67%</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-12 order-xxl-0 order-1">
+        <div class="card portfolio-card"> 
+          <div class="card-header card-no-border">
+            <div class="header-top">
+              <h5 class="m-0">My Portfolio</h5>
+              <div class="card-header-right-icon">
+                <div class="dropdown">
+                  <button class="btn dropdown-toggle" id="portfolioButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">BTC</button>
+                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="portfolioButton"><a class="dropdown-item" href="#">ETH</a><a class="dropdown-item" href="#">USD</a><a class="dropdown-item" href="#">LTC</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row"> 
+              <div class="col-xxl-12 col-xl-7 col-sm-6 box-col-6">
+                <div class="portfolio-chart-container"> 
+                  <div id="portfolio-chart"> </div>
+                </div>
+              </div>
+              <div class="col-xxl-12 col-xl-5 col-sm-6 box-col-6"> 
+                <div class="portfolio-table recent-table table-responsive"> 
+                  <table class="table"> 
+                    <tr> 
+                      <td> 
+                        <div class="d-flex align-items-center gap-2">
+                          <div class="currency-icon warning">
+                            <svg>
+                              <use href="{% static 'assets/svg/icon-sprite.svg'%}#beta"></use>
+                            </svg>
+                          </div>
+                          <div> 
+                            <h6 class="f-14 mb-1">Bitcoin</h6>
+                            <div class="d-flex align-items-center gap-1"><span class="status bg-success"></span><span class="f-light">BTC</span></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-end"> 
+                        <h6 class="f-14 f-w-400 mb-1">BTC 0.00876543</h6><span class="font-success">$14,987.13</span>
+                      </td>
+                    </tr>
+                    <tr> 
+                      <td> 
+                        <div class="d-flex align-items-center gap-2">
+                          <div class="currency-icon success">
+                            <svg>
+                              <use href="{% static 'assets/svg/icon-sprite.svg'%}#ltc"></use>
+                            </svg>
+                          </div>
+                          <div> 
+                            <h6 class="f-14 mb-1">Ethereum</h6>
+                            <div class="d-flex align-items-center gap-1"><span class="status bg-danger"></span><span class="f-light">ETH</span></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-end"> 
+                        <h6 class="f-14 f-w-400 mb-1">ETC 1.60876543</h6><span class="font-danger">$49,987.13</span>
+                      </td>
+                    </tr>
+                    <tr> 
+                      <td> 
+                        <div class="d-flex align-items-center gap-2">
+                          <div class="currency-icon primary">
+                            <svg>
+                              <use href="{% static 'assets/svg/icon-sprite.svg'%}#eth"></use>
+                            </svg>
+                          </div>
+                          <div> 
+                            <h6 class="f-14 mb-1">Litecoin</h6>
+                            <div class="d-flex align-items-center gap-1"><span class="status bg-success"></span><span class="f-light">LTC</span></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-end"> 
+                        <h6 class="f-14 f-w-400 mb-1">LTC 1.60876543</h6><span class="font-success">$35,571.25</span>
+                      </td>
+                    </tr>
+                    <tr> 
+                      <td> 
+                        <div class="d-flex align-items-center gap-2">
+                          <div class="currency-icon light-blue">
+                            <svg>
+                              <use href="{% static 'assets/svg/icon-sprite.svg'%}#dash"></use>
+                            </svg>
+                          </div>
+                          <div> 
+                            <h6 class="f-14 mb-1">Dash</h6>
+                            <div class="d-flex align-items-center gap-1"><span class="status bg-success"></span><span class="f-light">DSH</span></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-end"> 
+                        <h6 class="f-14 f-w-400 mb-1">DSH 1.80741510</h6><span class="font-success">$17,047.30</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-12 col-sm-6 box-col-6">
+        <div class="card"> 
+          <div class="card-header card-no-border">
+            <div class="header-top">
+              <h5 class="m-0">Activities</h5>
+              <div class="card-header-right-icon">
+                <div class="dropdown icon-dropdown">
+                  <button class="btn dropdown-toggle" id="activitiesButton" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="icon-more-alt"></i></button>
+                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="activitiesButton"><a class="dropdown-item" href="#">Weekly</a><a class="dropdown-item" href="#">Yearly</a><a class="dropdown-item" href="#">Monthly</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body pt-0 activity-card"> 
+            <div class="appointment-table customer-table table-responsive">
+              <table class="table table-bordernone">
+                <tbody>
+                  <tr>
+                    <td><img class="img-fluid img-40 rounded-circle me-2" src="{% static 'assets/images/dashboard/user/3.jpg'%}" alt="user"></td>
+                    <td class="img-content-box"><a class="d-block f-w-500" href="user-profile.html">Anna K.</a><span class="f-light">To : 0x187...12bb</span></td>
+                    <td class="text-end"> <span class="font-success">+0.3BNB</span><span class="d-block f-light">29.09.22</span></td>
+                  </tr>
+                  <tr>
+                    <td><img class="img-fluid img-40 rounded-circle me-2" src="{% static 'assets/images/dashboard/user/12.jpg'%}" alt="user"></td>
+                    <td class="img-content-box"><a class="d-block f-w-500" href="user-profile.html">Guy Hawkins</a><span class="f-light">To : 0x187...12bb</span></td>
+                    <td class="text-end"> <span class="font-success">+0.3BNB</span><span class="d-block f-light">29.09.22</span></td>
+                  </tr>
+                  <tr>
+                    <td><img class="img-fluid img-40 rounded-circle me-2" src="{% static 'assets/images/dashboard/user/10.jpg'%}" alt="user"></td>
+                    <td class="img-content-box"><a class="d-block f-w-500" href="user-profile.html">Jenny Wilson</a><span class="f-light">To : 0x187...12bb</span></td>
+                    <td class="text-end"> <span class="font-danger">-0.1BNB</span><span class="d-block f-light">29.09.22</span></td>
+                  </tr>
+                  <tr>
+                    <td><img class="img-fluid img-40 rounded-circle me-2" src="{% static 'assets/images/dashboard/user/11.jpg'%}" alt="user"></td>
+                    <td class="img-content-box"><a class="d-block f-w-500" href="user-profile.html">Jacob B.</a><span class="f-light">To : 0x187...12bb</span></td>
+                    <td class="text-end"> <span class="font-success">+0.3BNB</span><span class="d-block f-light">29.09.22</span></td>
+                  </tr>
+                  <tr>
+                    <td><img class="img-fluid img-40 rounded-circle me-2" src="{% static 'assets/images/dashboard/user/13.jpg'%}" alt="user"></td>
+                    <td class="img-content-box"><a class="d-block f-w-500" href="user-profile.html">Esther Howard</a><span class="f-light">To : 0x187...12bb</span></td>
+                    <td class="text-end"> <span class="font-danger">-0.2BNB</span><span class="d-block f-light">29.09.22</span></td>
+                  </tr>
+                  <tr>
+                    <td><img class="img-fluid img-40 rounded-circle me-2" src="{% static 'assets/images/dashboard/user/5.jpg'%}" alt="user"></td>
+                    <td class="img-content-box"><a class="d-block f-w-500" href="user-profile.html">Leslie Alexander</a><span class="f-light">To : 0x187...12bb</span></td>
+                    <td class="text-end"> <span class="font-success">+0.3BNB</span><span class="d-block f-light">29.09.22</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

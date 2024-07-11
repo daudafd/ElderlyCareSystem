@@ -1,0 +1,127 @@
+{% load static %}
+{% load sass_tags %}
+
+<!-- Bootstrap TouchSpin Spinners start-->
+<div class="bootstrap-touchspin">
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">Default Touchspin</h5><span>Add <code>.touchspin</code> class to input to add touchspin
+            input group.</span>
+        </div>
+        <div class="card-body">
+          <fieldset>
+            <div class="input-group">
+              <input class="touchspin" type="text" value="40">
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">vertical Touchspin</h5><span>Add <code>.touchspin-vertical</code> class for vertical
+            touchspin input group.</span>
+        </div>
+        <div class="card-body">
+          <fieldset>
+            <div class="touchspin-vertical-tab">
+              <input class="touchspin-vertical" type="text" value="55">
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">Touchspin with Postfix</h5><span>Add <code>data-bts-postfix="POSTFIX_VALUE"</code>
+            attribute to input to add postfix to touchspin input group.</span>
+        </div>
+        <div class="card-body">
+          <fieldset>
+            <div class="input-group">
+              <input class="touchspin" type="text" value="40" data-bts-postfix="%">
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">Touchspin with Prefix</h5><span>Add <code>data-bts-prefix="PREFIX_VALUE"</code>
+            attribute to input to add prefix to touchspin input group.</span>
+        </div>
+        <div class="card-body">
+          <fieldset>
+            <div class="input-group">
+              <input class="touchspin" type="text" value="40" data-bts-prefix="#">
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">Min Max Value of Touchspin</h5><span>Use
+            <code>data-bts-min="VALUE" data-bts-max="VALUE"</code> attribute to input to set min and max value of
+            touchspin input.</span>
+        </div>
+        <div class="card-body">
+          <fieldset>
+            <div class="input-group">
+              <input class="touchspin" type="text" value="40" data-bts-min="1" data-bts-max="100">
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">Touchspin with initial Value</h5><span>Add <code>data-bts-init-val="VALUE"</code>
+            attribute attribute to set initial value for input group.</span>
+        </div>
+        <div class="card-body">
+          <fieldset>
+            <div class="input-group">
+              <input class="touchspin" type="text" data-bts-init-val="20">
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">Touchspin steps</h5><span>Add <code>data-bts-step="VALUE"</code> attribute for
+            increament and decrement steps to touchspin input group.</span>
+        </div>
+        <div class="card-body">
+          <fieldset>
+            <div class="input-group">
+              <input class="touchspin" type="text" value="40" data-bts-step="10">
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">Decimal Value of Touchspin</h5><span>Use <code>data-bts-decimal="VALUE"</code>
+            attribute to use decimal value of touchspin input.</span>
+        </div>
+        <div class="card-body">
+          <fieldset>
+            <div class="input-group">
+              <input class="touchspin" type="text" value="50.00" data-bts-step="0.25" data-bts-decimals="2">
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>

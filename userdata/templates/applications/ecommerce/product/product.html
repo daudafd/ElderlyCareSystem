@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/select2.scss' %}">
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/owlcarousel.scss' %}">
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/range-slider.scss' %}">
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+      <div class="container-fluid product-wrapper">
+            {% include "layout/breadcrumb.html" %}
+            
+
+                         {% include "applications/ecommerce/product/components/filters.html" %}
+                         {% include "applications/ecommerce/product/components/product-1.html" %}
+                         {% include "applications/ecommerce/product/components/product-2.html" %}
+                         {% include "applications/ecommerce/product/components/product-3.html" %}
+                         {% include "applications/ecommerce/product/components/product-4.html" %}
+                         {% include "applications/ecommerce/product/components/product-5.html" %}
+                         {% include "applications/ecommerce/product/components/product-6.html" %}
+            
+
+              
+      </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/range-slider/ion.rangeSlider.min.js'%}"></script>
+<script src="{% static 'assets/js/range-slider/rangeslider-script.js'%}"></script>
+<script src="{% static 'assets/js/touchspin/vendors.min.js'%}"></script>
+<script src="{% static 'assets/js/touchspin/touchspin.js'%}"></script>
+<script src="{% static 'assets/js/touchspin/input-groups.min.js'%}"></script>
+<script src="{% static 'assets/js/owlcarousel/owl.carousel.js'%}"></script>
+<script src="{% static 'assets/js/select2/select2.full.min.js'%}"></script>
+<script src="{% static 'assets/js/select2/select2-custom.js'%}"></script>
+<script src="{% static 'assets/js/tooltip-init.js'%}"></script>
+<script src="{% static 'assets/js/product-tab.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

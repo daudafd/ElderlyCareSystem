@@ -1,0 +1,24 @@
+{% load static %}
+{% load sass_tags %}
+<!-- login page start-->
+<div class="container-fluid p-0">
+  <div class="row m-0">
+    <div class="col-12 p-0">
+      <div class="login-card">
+        <form class="theme-form login-form theme-login-form" method="post">
+          <h4>Create your account</h4>
+          <h6>Enter your personal details to create account</h6>
+          {% csrf_token %} {{ form }}
+          <div class="form-group">
+            <button class="btn btn-primary btn-block" type="submit">
+              Create Account
+            </button>
+          </div>
+          <p>
+            Already have an account?<a class="ms-2" href="/login">Sign in</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

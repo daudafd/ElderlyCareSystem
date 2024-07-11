@@ -1,0 +1,34 @@
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-header pb-0 card-no-border">
+      <h3 class="mb-3">Add rows </h3><span>New rows can be added to a DataTable using the<code class="api" title="DataTables API method">row.add()</code> API method. Simply call the API function with the data for the new row (be it an array or object). Multiple rows
+                                        can be added using the<code class="api" title="DataTables API method">rows.add()</code> method (note
+                                        the plural). Data can likewise be updated with the <code class="api" title="DataTables API method">row().data()</code> and <code class="api" title="DataTables API method">row().remove()</code> methods.</span><span>Note that in order to see the new row in the table you must call the<code class="api" title="DataTables API method">draw()</code> method, which is easily done through the chaining that the DataTables API employs.</span>
+    </div>
+    <div class="card-body">
+      <button class="btn btn-primary mb-3" id="addRow">Add new row</button>
+      <div class="table-responsive">
+        <table class="display" id="API-1">
+          <thead>
+            <tr>
+              <th>Column 1</th>
+              <th>Column 2</th>
+              <th>Column 3</th>
+              <th>Column 4</th>
+              <th>Column 5</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Column 1</th>
+              <th>Column 2</th>
+              <th>Column 3</th>
+              <th>Column 4</th>
+              <th>Column 5</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

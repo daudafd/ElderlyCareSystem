@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/date-picker.scss' %}">
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/dropzone.scss' %}">
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+  <div class="container-fluid">
+    {% include "layout/breadcrumb.html" %}
+
+    {% include "applications/projects/projectcreate/components/project-title.html" %}
+
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/dropzone/dropzone.js'%}"></script>
+<script src="{% static 'assets/js/dropzone/dropzone-script.js'%}"></script>
+<script src="{% static 'assets/js/tooltip-init.js'%}"></script>
+<script src="{% static 'assets/js/datepicker/date-picker/datepicker.js'%}"></script>
+<script src="{% static 'assets/js/datepicker/date-picker/datepicker.en.js'%}"></script>
+<script src="{% static 'assets/js/datepicker/date-picker/datepicker.custom.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

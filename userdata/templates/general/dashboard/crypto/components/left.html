@@ -1,0 +1,378 @@
+{% load static %}
+<div class="col-xxl-3 col-xl-4 box-col-4">
+    <div class="row"> 
+      <div class="col-xl-12 col-sm-6">
+        <div class="card crypto-main-card">
+          <div class="card-body"> 
+            <div class="deposit-wrap"> 
+              <div> 
+                <h5>Cryptocurrency just got even better.</h5>
+                <p>Lorem Ipsum is simply dummy text</p>
+                <button class="btn btn-white f-w-500">Deposit Now</button>
+              </div><img src="{% static 'assets/images/dashboard-4/crypto.png'%}" alt="crypto">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-12 col-sm-6">
+        <div class="card widget-hover">
+          <div class="card-body radial-progress-card"> 
+            <div> 
+              <h6 class="mb-0">Average Sales Per Day</h6>
+              <div class="sale-details"> 
+                <h5 class="font-primary mb-0">45,908</h5><span class="f-12 f-light f-w-500"><i data-feather="arrow-up"></i>+5.7%</span>
+              </div>
+              <p class="f-light"> The point of using Lorem Ipsum</p>
+            </div>
+            <div class="radial-chart-wrap"> 
+              <div id="radial-chart"> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-12 col-sm-6">
+        <div class="card widget-hover">
+          <div class="card-body radial-progress-card"> 
+            <div> 
+              <h6 class="mb-0">Average Profit Per Day</h6>
+              <div class="sale-details"> 
+                <h5 class="font-secondary mb-0">89.6%</h5><span class="f-12 f-light f-w-500"><i data-feather="arrow-up"></i>+2.7%</span>
+              </div>
+              <p class="f-light"> The point of using Lorem Ipsum</p>
+            </div>
+            <div class="radial-chart-wrap"> 
+              <div id="radial-chart2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-12 col-sm-6">
+        <div class="card widget-hover"> 
+          <div class="card-body radial-progress-card"> 
+            <div> 
+              <h6 class="mb-0">Average Visits Per Day</h6>
+              <div class="sale-details"> 
+                <h5 class="font-success mb-0">70k</h5><span class="f-12 f-light f-w-500"><i data-feather="arrow-up"></i>+1.5%</span>
+              </div>
+              <p class="f-light"> The point of using Lorem Ipsum</p>
+            </div>
+            <div class="radial-chart-wrap"> 
+              <div id="radial-chart3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12"> 
+        <div class="card tranaction-card">
+          <div class="card-header card-no-border">
+            <div class="header-top"> 
+              <h5>Transactions</h5>
+              <ul class="nav nav-tabs custom-tab" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="buy-tab" data-bs-toggle="tab" data-bs-target="#buy" type="button" role="tab" aria-controls="buy" aria-selected="false">Buy</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="sell-tab" data-bs-toggle="tab" data-bs-target="#sell" type="button" role="tab" aria-controls="sell" aria-selected="false">Sell</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-body pt-0">
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                <div class="table-responsive recent-table transaction-table">
+                  <table class="table">
+                    <tbody> 
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-success me-2" data-feather="trending-up"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Buy BTC</h6><span class="f-light">14 Mar, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.018 BTC</span></td>
+                        <td> <span class="f-light f-w-500">$236.89</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-danger me-2" data-feather="trending-down"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Sell ETH</h6><span class="f-light">25 Mar, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.089 ETH</span></td>
+                        <td> <span class="f-light f-w-500">$116.89</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-success me-2" data-feather="trending-up"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Buy LTC</h6><span class="f-light">28 Mar, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.018 LTC</span></td>
+                        <td> <span class="f-light f-w-500">$236.89</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-success me-2" data-feather="trending-up"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Buy LTC</h6><span class="f-light">05 Apr, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.089 LTC</span></td>
+                        <td> <span class="f-light f-w-500">$29.89</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-danger me-2" data-feather="trending-down"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Sell BTC</h6><span class="f-light">16 Apr, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.012 BTC</span></td>
+                        <td> <span class="f-light f-w-500">$236.89</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-success me-2" data-feather="trending-up"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Buy BTC</h6><span class="f-light">14 Mar, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.018 BTC</span></td>
+                        <td> <span class="f-light f-w-500">$236.89</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-danger me-2" data-feather="trending-down"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Sell ETH</h6><span class="f-light">25 Mar, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.089 ETH</span></td>
+                        <td> <span class="f-light f-w-500">$116.89</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-success me-2" data-feather="trending-up"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Buy LTC</h6><span class="f-light">28 Mar, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.018 LTC</span></td>
+                        <td> <span class="f-light f-w-500">$236.89</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="buy" role="tabpanel" aria-labelledby="buy-tab"> 
+                <div class="table-responsive recent-table transaction-table">
+                  <table class="table">
+                    <tbody> 
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-success me-2" data-feather="trending-up"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Buy LTC</h6><span class="f-light">30 Mar, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.010 LTC</span></td>
+                        <td> <span class="f-light f-w-500">$105.00</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-danger me-2" data-feather="trending-down"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Buy ETH</h6><span class="f-light">05 Apr, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.075 ETH</span></td>
+                        <td> <span class="f-light f-w-500">$120.74</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-success me-2" data-feather="trending-up"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Buy BTC</h6><span class="f-light">14 Mar, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.018 BTC</span></td>
+                        <td> <span class="f-light f-w-500">$236.89</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-success me-2" data-feather="trending-up"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Buy LTC</h6><span class="f-light">05 Apr, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.089 LTC</span></td>
+                        <td> <span class="f-light f-w-500">$29.89</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-danger me-2" data-feather="trending-down"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Buy BTC</h6><span class="f-light">17 Sep, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.08 BTC</span></td>
+                        <td> <span class="f-light f-w-500">$380.89</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-success me-2" data-feather="trending-up"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Buy LTC</h6><span class="f-light">30 Mar, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.010 LTC</span></td>
+                        <td> <span class="f-light f-w-500">$105.00</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-danger me-2" data-feather="trending-down"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Buy ETH</h6><span class="f-light">05 Apr, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.075 ETH</span></td>
+                        <td> <span class="f-light f-w-500">$120.74</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-success me-2" data-feather="trending-up"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Buy BTC</h6><span class="f-light">14 Mar, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.018 BTC</span></td>
+                        <td> <span class="f-light f-w-500">$236.89</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="sell" role="tabpanel" aria-labelledby="sell-tab">
+                <div class="table-responsive recent-table transaction-table">
+                  <table class="table">
+                    <tbody> 
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-danger me-2" data-feather="trending-down"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Sell BTC</h6><span class="f-light">14 Mar, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.018 BTC</span></td>
+                        <td> <span class="f-light f-w-500">$236.89</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-danger me-2" data-feather="trending-down"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Sell ETH</h6><span class="f-light">25 Mar, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.089 ETH</span></td>
+                        <td> <span class="f-light f-w-500">$116.89</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-success me-2" data-feather="trending-up"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Sell LTC</h6><span class="f-light">28 Mar, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.018 LTC</span></td>
+                        <td> <span class="f-light f-w-500">$236.89</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-success me-2" data-feather="trending-up"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Sell LTC</h6><span class="f-light">05 Apr, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.089 LTC</span></td>
+                        <td> <span class="f-light f-w-500">$29.89</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-danger me-2" data-feather="trending-down"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Sell BTC</h6><span class="f-light">16 Apr, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.012 BTC</span></td>
+                        <td> <span class="f-light f-w-500">$236.89</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-danger me-2" data-feather="trending-down"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Sell BTC</h6><span class="f-light">14 Mar, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.018 BTC</span></td>
+                        <td> <span class="f-light f-w-500">$236.89</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-danger me-2" data-feather="trending-down"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Sell ETH</h6><span class="f-light">25 Mar, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.089 ETH</span></td>
+                        <td> <span class="f-light f-w-500">$116.89</span></td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <div class="d-flex"> <i class="font-success me-2" data-feather="trending-up"></i>
+                            <div> 
+                              <h6 class="f-14 mb-0">Sell LTC</h6><span class="f-light">28 Mar, 2022</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td> <span class="f-light f-w-500">0.018 LTC</span></td>
+                        <td> <span class="f-light f-w-500">$236.89</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,130 @@
+{% load static %}
+<div class="col-xxl-5 col-ed-12 box-col-12"> 
+    <div class="card course-card"> 
+      <div class="card-header card-no-border">
+        <div class="header-top">
+          <h5 class="m-0">My Course</h5>
+          <div class="card-header-right-icon">
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" id="popularButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">Most Popular</button>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="popularButton"><a class="dropdown-item" href="#">Today</a><a class="dropdown-item" href="#">Tomorrow</a><a class="dropdown-item" href="#">Yesterday</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body pt-0">
+        <div class="course-main-card">
+          <div class="course-wrapper"> 
+            <div class="course-icon-box">
+              <div class="icon-wrap"><img src="{% static 'assets/images/dashboard-3/course/1.svg'%}" alt="clock vector"></div><img class="arrow-bg" src="{% static 'assets/images/dashboard-3/course/back-arrow/1.png'%}" alt="sqaure border arrow">
+            </div>
+            <h6 class="f-14">Management</h6>
+          </div>
+          <div class="course-wrapper">
+            <div class="course-icon-box">
+              <div class="icon-wrap"><img src="{% static 'assets/images/dashboard-3/course/2.svg'%}" alt="web development vector"></div><img class="arrow-bg" src="{% static 'assets/images/dashboard-3/course/back-arrow/2.png'%}" alt="sqaure border arrow">
+            </div>
+            <h6 class="f-14">Web Devlopment</h6>
+          </div>
+          <div class="course-wrapper">
+            <div class="course-icon-box">
+              <div class="icon-wrap"><img src="{% static 'assets/images/dashboard-3/course/3.svg'%}" alt="business vector"></div><img class="arrow-bg" src="{% static 'assets/images/dashboard-3/course/back-arrow/1.png'%}" alt="sqaure border arrow">
+            </div>
+            <h6 class="f-14">Business Analytics</h6>
+          </div>
+          <div class="course-wrapper">
+            <div class="course-icon-box">
+              <div class="icon-wrap"><img src="{% static 'assets/images/dashboard-3/course/4.svg'%}" alt="marketing vector"></div><img class="arrow-bg" src="{% static 'assets/images/dashboard-3/course/back-arrow/3.png'%}" alt="sqaure border arrow">
+            </div>
+            <h6 class="f-14">Marketing</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xxl-4 col-ed-6 col-md-7 box-col-7">
+    <div class="card schedule-card">
+      <div class="card-header card-no-border">
+        <div class="header-top">
+          <h5 class="m-0">Upcoming Schedule</h5>
+          <div class="card-header-right-icon"><a class="btn badge-light-primary" href="#">+ Create</a></div>
+        </div>
+      </div>
+      <div class="card-body pt-0"> 
+        <ul class="schedule-list"> 
+          <li class="primary"><img src="{% static 'assets/images/dashboard/user/4.jpg'%}" alt="profile">
+            <div> 
+              <h6 class="mb-1">Web Design</h6>
+              <ul>
+                <li class="f-light">
+                  <svg class="fill-icon f-light">
+                    <use href="{% static 'assets/svg/icon-sprite.svg'%}#bag"></use>
+                  </svg><span>January 3, 2022</span>
+                </li>
+                <li class="f-light">
+                  <svg class="fill-icon f-success">
+                    <use href="{% static 'assets/svg/icon-sprite.svg'%}#clock"></use>
+                  </svg><span> 09.00 - 12.00 AM</span>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="warning"><img src="{% static 'assets/images/dashboard/user/2.jpg'%}" alt="profile">
+            <div> 
+              <h6 class="mb-1">UI/UX Design</h6>
+              <ul>
+                <li class="f-light">
+                  <svg class="fill-icon f-light">
+                    <use href="{% static 'assets/svg/icon-sprite.svg'%}#bag"></use>
+                  </svg><span>Febuary 10, 2022</span>
+                </li>
+                <li class="f-light">
+                  <svg class="fill-icon f-success">
+                    <use href="{% static 'assets/svg/icon-sprite.svg'%}#clock"></use>
+                  </svg><span> 11.00 - 1.00 PM</span>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-xxl-3 col-ed-6 col-md-5 col-sm-6 box-col-5">
+    <div class="card">
+      <div class="card-header card-no-border">
+        <div class="header-top">
+          <h5 class="m-0">Active Lessons</h5>
+          <div class="card-header-right-icon"><a class="link-only" href="#">View <i data-feather="arrow-right"></i></a></div>
+        </div>
+      </div>
+      <div class="card-body pt-0"> 
+        <ul class="lessons-lists"> 
+          <li> <img src="{% static 'assets/images/dashboard-3/lessons/1.png'%}" alt="ux icon">
+            <div> 
+              <h6 class="f-14 f-w-400 mb-0">UI/UX </h6><span class="f-light">Web design</span>
+            </div>
+            <div class="lesson-wrap ms-auto"> 
+              <div id="lessonChart1"> </div>
+            </div>
+          </li>
+          <li> <img src="{% static 'assets/images/dashboard-3/lessons/2.png'%}" alt="vue icon">
+            <div> 
+              <h6 class="f-14 f-w-400 mb-0">Vue 3</h6><span class="f-light">JS Framework</span>
+            </div>
+            <div class="lesson-wrap ms-auto"> 
+              <div id="lessonChart2"></div>
+            </div>
+          </li>
+          <li> <img src="{% static 'assets/images/dashboard-3/lessons/3.png'%}" alt="bootstrap icon">
+            <div> 
+              <h6 class="f-14 f-w-400 mb-0">Bootstrap 5</h6><span class="f-light">Framework</span>
+            </div>
+            <div class="lesson-wrap ms-auto"> 
+              <div id="lessonChart3"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>

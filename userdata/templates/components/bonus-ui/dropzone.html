@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/dropzone.scss' %}">
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+
+ 
+
+  <!-- Container-fluid starts-->
+  <div class="container-fluid">
+    {% include "layout/breadcrumb.html" %}
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <h5>Single File Upload</h5>
+          </div>
+          <div class="card-body">
+            <form class="dropzone" id="singleFileUpload" action="/upload.php"> {% csrf_token %}
+              <div class="dz-message needsclick"><i class="icon-cloud-up"></i>
+                <h6>Drop files here or click to upload.</h6><span class="note needsclick">(This is just a demo dropzone.
+                  Selected files are <strong>not</strong> actually uploaded.)</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <h5>Multi File Upload</h5>
+          </div>
+          <div class="card-body">
+            <form class="dropzone dropzone-primary" id="multiFileUpload" action="/upload.php"> {% csrf_token %}
+              <div class="dz-message needsclick"><i class="icon-cloud-up"></i>
+                <h6>Drop files here or click to upload.</h6><span class="note needsclick">(This is just a demo dropzone.
+                  Selected files are <strong>not</strong> actually uploaded.)</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <h5>File Type Validation</h5>
+          </div>
+          <div class="card-body">
+            <form class="dropzone dropzone-info" id="fileTypeValidation" action="/upload.php"> {% csrf_token %}
+              <div class="dz-message needsclick"><i class="icon-cloud-up"></i>
+                <h6>Drop files here or click to upload.</h6><span class="note needsclick">(This is just a demo dropzone.
+                  Selected files are <strong>not</strong> actually uploaded.)</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Container-fluid Ends-->
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/dropzone/dropzone.js' %}"></script>
+<script src="{% static 'assets/js/dropzone/dropzone-script.js' %}"></script>
+<script src="{% static 'assets/js/tooltip-init.js' %}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

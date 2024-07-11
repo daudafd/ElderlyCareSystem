@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/datatables.scss' %}">
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+            <div class="row">
+
+                  {% include "forms-table/table/data-table/datatable-styling/components/base-style.html" %}
+                  {% include "forms-table/table/data-table/datatable-styling/components/no-styling.html" %}
+                  {% include "forms-table/table/data-table/datatable-styling/components/cell-borders.html" %}
+                  {% include "forms-table/table/data-table/datatable-styling/components/hover-table.html" %}
+                  {% include "forms-table/table/data-table/datatable-styling/components/order-column.html" %}
+                  {% include "forms-table/table/data-table/datatable-styling/components/row-borders.html" %}
+                  {% include "forms-table/table/data-table/datatable-styling/components/stripe-table.html" %}
+
+            </div>
+      </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/datatable/datatables/jquery.dataTables.min.js'%}"></script>
+<script src="{% static 'assets/js/datatable/datatables/datatable.custom.js'%}"></script>
+<script src="{% static 'assets/js/tooltip-init.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

@@ -1,0 +1,249 @@
+/**=====================
+    2.22 Modal CSS start
+==========================**/
+
+.modal-toggle-wrapper {
+    .form-control {
+        &::placeholder {
+            font-size: 13px;
+        }
+    }
+
+    .modal-img {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 200px;
+            height: 200px;
+
+            @media (max-width:992px) {
+                width: calc(136px + (200 - 136) * ((100vw - 320px) / (992 - 320)));
+                height: calc(136px + (200 - 136) * ((100vw - 320px) / (992 - 320)));
+            }
+        }
+
+        li {
+            img {
+                width: 100px;
+                height: 100px;
+
+                @media (max-width:992px) {
+                    width: calc(75px + (100 - 75) * ((100vw - 320px) / (992 - 320)));
+                    height: calc(75px + (100 - 75) * ((100vw - 320px) / (992 - 320)));
+                }
+            }
+        }
+
+        li+li {
+            margin-left: -39px;
+        }
+    }
+
+    button {
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+.large-modal-header,
+.large-modal-body {
+    display: flex;
+    align-items: center;
+    color: $dark-color;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.modal-padding-space {
+    padding-left: 20px;
+}
+
+.svg-modal {
+    width: 15px;
+    height: 15px;
+    stroke: $secondary-color;
+    vertical-align: middle;
+}
+
+.card-wrapper {
+    .modal-heading {
+        h5 {
+            font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1400 - 320)));
+        }
+    }
+
+    .balance-modal {
+        @media (min-width:750px) and (max-width:1200px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.modal-footer {
+    .btn {
+        margin: 0 4px;
+    }
+}
+
+.modal-content {
+    .modal-header {
+        .btn-close {
+            &:focus {
+                box-shadow: unset;
+            }
+        }
+    }
+}
+
+.modal-details {
+    h6 {
+        padding-bottom: 12px;
+    }
+
+    .web-content {
+        margin-bottom: 16px;
+
+        .d-flex {
+            p {
+                padding-bottom: 8px;
+            }
+
+            &:last-child {
+                p {
+                    padding-bottom: 0;
+                }
+            }
+
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        // +.web-content {
+        //     margin-top: 12px;
+        // }
+    }
+
+}
+
+// Modal page
+.modal {
+    .modal-body {
+        .card {
+            box-shadow: none !important;
+        }
+    }
+}
+
+.modal-dialog {
+    .modal-content {
+        .modal-body {
+            p {
+                a {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+// rangeslider
+.irs-from,
+.irs-to,
+.irs-single {
+    background: var(--theme-deafult);
+
+    &:after {
+        border-top-color: var(--theme-deafult);
+    }
+}
+
+.irs-line-mid,
+.irs-line-left,
+.irs-line-right,
+.irs-bar,
+.irs-bar-edge {
+    background-color: var(--theme-deafult);
+}
+
+// sweetalert css
+.swal-button {
+    background-color: var(--theme-deafult);
+
+    &:active {
+        background-color: darken($primary-color, 5%);
+    }
+}
+
+.swal-button--cancel {
+    background-color: #EFEFEE !important;
+}
+
+.clipboaard-container {
+    h6 {
+        line-height: 1.6;
+        font-size: $paragraph-font-size;
+    }
+}
+
+fieldset {
+
+    .bootstrap-touchspin-postfix,
+    .bootstrap-touchspin-prefix {
+        border-radius: 0;
+        padding: .4rem .75rem;
+    }
+
+    .input-group-lg {
+        .touchspin {
+            height: 50px;
+        }
+    }
+}
+
+.f1 .f1-steps .f1-step .f1-step-icon {
+    padding: 12px;
+}
+
+.form-inline .form-group {
+    display: flex;
+}
+
+.input-group-text {
+    i {
+        line-height: 1.5;
+    }
+}
+
+// animated modal css
+.animated-modal {
+    .form-select {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+    }
+}
+
+.card-wrapper {
+    padding: 14px;
+
+    dl {
+        dt {
+            font-weight: 500;
+        }
+    }
+}
+
+
+
+/**=====================
+    2.22 Modal CSS end
+==========================**/

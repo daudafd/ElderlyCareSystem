@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/datatables.scss' %}">
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+            <div class="row">
+
+                  {% include "forms-table/table/data-table/datatable-plugin/components/api-plug.html" %}
+                  {% include "forms-table/table/data-table/datatable-plugin/components/ordering-plug.html" %}
+                  {% include "forms-table/table/data-table/datatable-plugin/components/custom-filtering.html" %}
+                  {% include "forms-table/table/data-table/datatable-plugin/components/live-dom.html" %}
+
+            </div>
+      </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/datatable/datatables/jquery.dataTables.min.js'%}"></script>
+<script src="{% static 'assets/js/datatable/datatables/datatable.custom.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

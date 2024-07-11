@@ -1,0 +1,42 @@
+{% load static %}
+{% load sass_tags %}
+<div class="col-xl-3 box-col-12">
+  <div class="md-sidebar"><a class="btn btn-primary md-sidebar-toggle" href="javascript:void(0)">email filter</a>
+    <div class="md-sidebar-aside job-left-aside custom-scrollbar">
+      <div class="email-left-aside">
+        <div class="card">
+          <div class="card-body">
+            <div class="email-app-sidebar">
+              <div class="media">
+                <div class="media-size-email"><img class="me-3 rounded-circle" src="{% static 'assets/images/user/user.png'%}" alt=""></div>
+                <div class="media-body">
+                  <h6 class="f-w-600">MARKJENCO</h6>
+                  <p>Markjecno@gmail.com</p>
+                </div>
+              </div>
+              <ul class="nav main-menu" role="tablist">
+                <li class="nav-item"><a class="btn-primary btn-block btn-mail show" id="pills-darkhome-tab" data-bs-toggle="pill" href="#pills-darkhome" role="tab" aria-controls="pills-darkhome" aria-selected="true"><i class="icofont icofont-envelope me-2"></i> NEW MAIL</a></li>
+                <li class="nav-item"><a id="pills-darkprofile-tab" data-bs-toggle="pill" href="#pills-darkprofile" role="tab" aria-controls="pills-darkprofile" aria-selected="false"><span class="title"><i class="icon-import"></i> Inbox</span><span class="badge pull-right">(236)</span></a></li>
+                <li><a href="#"><span class="title"><i class="icon-folder"></i> All mail</span></a></li>
+                <li><a href="#"><span class="title"><i class="icon-new-window"></i> Sent</span><span class="badge pull-right">(69)</span></a></li>
+                <li><a href="#"><span class="title"><i class="icon-pencil-alt"></i> DRAFT</span><span class="badge pull-right">(59)</span></a></li>
+                <li><a href="#"><span class="title"><i class="icon-trash"></i> TRASH</span><span class="badge pull-right">(99)</span></a></li>
+                <li><a href="#"><span class="title"><i class="icon-info-alt"></i> IMPORTANT</span></a></li>
+                <li><a href="#"><span class="title"><i class="icon-star"></i> Starred</span></a></li>
+                <li>
+                  <hr>
+                </li>
+                <li><a href="#"><span class="title"><i class="icon-email"></i> UNREAD</span></a></li>
+                <li><a href="#"><span class="title"><i class="icon-export"></i> SPAM</span></a></li>
+                <li><a href="#"><span class="title"><i class="icon-share"></i> OUTBOX</span></a></li>
+                <li><a href="#"><span class="title"><i class="icon-file"></i> UPDATE</span></a></li>
+                <li><a href="#"><span class="title"><i class="icon-bell"></i> ALERT</span></a></li>
+                <li><a href="#"><span class="title"><i class="icon-notepad"></i> NOTES</span><span class="badge pull-right">(20)</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

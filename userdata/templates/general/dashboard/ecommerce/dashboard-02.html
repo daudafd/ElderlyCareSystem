@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+
+            {% include "general/dashboard/ecommerce/components/top.html" %}
+         
+           
+
+      </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+
+    <script src="{% static 'assets/js/chart/apex-chart/apex-chart.js'%}"></script>
+    <script src="{% static 'assets/js/chart/apex-chart/stock-prices.js'%}"></script>
+    <script src="{% static 'assets/js/counter/jquery.waypoints.min.js'%}"></script>
+    <script src="{% static 'assets/js/counter/jquery.counterup.min.js'%}"></script>
+    <script src="{% static 'assets/js/counter/counter-custom.js'%}"></script>
+    <script src="{% static 'assets/js/dashboard/dashboard_2.js'%}"></script>
+    <script src="{% static 'assets/js/animation/wow/wow.min.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

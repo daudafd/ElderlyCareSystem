@@ -1,0 +1,58 @@
+{% load static %}
+{% load sass_tags %}
+
+
+<div class="row">
+  <div class="col-12">
+    <div class="knowledgebase-bg"><img class="bg-img-cover bg-center"
+        src="{% static 'assets/images/knowledgebase/bg_1.jpg'%}" alt="looginpage"></div>
+    <div class="knowledgebase-search">
+      <div>
+        <h3>How Can I help you?</h3>
+        <form class="form-inline" action="#" method="get"> {% csrf_token %}
+          <div class="form-group w-100"><i data-feather="search"></i>
+            <input class="form-control-plaintext w-100" type="text" placeholder="Type question here" title="">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-4 xl-50 col-sm-6">
+    <div class="card bg-primary">
+      <div class="card-body">
+        <div class="media faq-widgets">
+          <div class="media-body">
+            <h5>Articles</h5>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+          </div><i data-feather="book-open"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-4 xl-50 col-sm-6">
+    <div class="card bg-primary">
+      <div class="card-body">
+        <div class="media faq-widgets">
+          <div class="media-body">
+            <h5>Knowledgebase</h5>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+          </div><i data-feather="aperture"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-4 xl-100">
+    <div class="card bg-primary">
+      <div class="card-body">
+        <div class="media faq-widgets">
+          <div class="media-body">
+            <h5>Support</h5>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+          </div><i data-feather="file-text"></i>
+        </div>
+      </div>
+    </div>
+  </div>

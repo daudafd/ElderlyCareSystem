@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/animate.scss' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/vendors/jkanban.css'%}">
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+  <div class="container-fluid jkanban-container">
+    {% include "layout/breadcrumb.html" %}
+
+    {% include "applications/kanban/components/kanban.html" %}
+
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/jkanban/jkanban.js'%}"></script>
+<script src="{% static 'assets/js/jkanban/custom.js'%}"></script>
+<script src="{% static 'assets/js/typeahead/handlebars.js'%}"></script>
+<script src="{% static 'assets/js/typeahead/typeahead.bundle.js'%}"></script>
+<script src="{% static 'assets/js/typeahead/typeahead.custom.js'%}"></script>
+<script src="{% static 'assets/js/typeahead-search/handlebars.js'%}"></script>
+<script src="{% static 'assets/js/typeahead-search/typeahead-custom.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

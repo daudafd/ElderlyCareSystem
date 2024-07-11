@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+
+            {% include "forms-table/forms/form-controls/base-input/components/basic-form.html" %}
+            {% include "forms-table/forms/form-controls/base-input/components/basic-input.html" %}
+            {% include "forms-table/forms/form-controls/base-input/components/edges-input.html" %}
+            {% include "forms-table/forms/form-controls/base-input/components/flat-input.html" %}
+            {% include "forms-table/forms/form-controls/base-input/components/raise-input.html" %}
+            {% include "forms-table/forms/form-controls/base-input/components/solid-input.html" %}
+            {% include "forms-table/forms/form-controls/base-input/components/input-sizing.html" %}
+            {% include "forms-table/forms/form-controls/base-input/components/custom-controls.html" %}
+
+      </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<!-- Plugins JS start-->
+<script src="{% static 'assets/js/tooltip-init.js'%}"></script>
+<!-- Plugins JS Ends-->
+{% endblock %}

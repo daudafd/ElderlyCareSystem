@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+{% include "general/dashboard/default/components/loader.html" %}
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+
+            {% include "general/dashboard/default/components/top.html" %}
+            {% include "general/dashboard/default/components/centre.html" %}
+            {% include "general/dashboard/default/components/bottom.html" %}
+
+      </div>
+</div>
+
+{% endblock %}
+
+{% block scriptcontent %}
+<script src="{% static 'assets/js/clock.js'%}"></script>
+<script src="{% static 'assets/js/chart/apex-chart/apex-chart.js'%}"></script>
+<script src="{% static 'assets/js/chart/apex-chart/stock-prices.js'%}"></script>
+<script src="{% static 'assets/js/chart/apex-chart/moment.min.js'%}"></script>
+<script src="{% static 'assets/js/notify/bootstrap-notify.min.js'%}"></script>
+<script  src="{% static 'assets/js/dashboard/default.js' %}"></script>
+<script src="{% static 'assets/js/notify/index.js'%}"></script>
+<script src="{% static 'assets/js/typeahead/handlebars.js'%}"></script>
+<script src="{% static 'assets/js/typeahead/typeahead.bundle.js'%}"></script>
+<script src="{% static 'assets/js/typeahead/typeahead.custom.js'%}"></script>
+<script src="{% static 'assets/js/typeahead-search/handlebars.js'%}"></script>
+<script src="{% static 'assets/js/typeahead-search/typeahead-custom.js'%}"></script>
+<script src="{% static 'assets/js/height-equal.js'%}"></script>
+<script src="{% static 'assets/js/animation/wow/wow.min.js'%}"></script>
+<!-- Plugins JS start-->
+<!-- Plugins JS Ends-->
+{% endblock %}
+{% block script %} 
+<script>new WOW().init();</script>
+{% endblock %}

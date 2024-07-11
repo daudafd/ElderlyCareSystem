@@ -1,0 +1,193 @@
+{% load static %}
+<div class="col-sm-4 col-xxl-2"> 
+    <div class="currency-widget warning height-equal widget-currency">
+      <div class="d-flex">
+        <div class="currency-icon-widget"> 
+          <svg>
+            <use href="{% static 'assets/svg/icon-sprite.svg'%}#beta"></use>
+          </svg>
+        </div>
+        <div> 
+          <h6>Bitcoin <span class="f-light">BTC</span></h6>
+        </div>
+      </div>
+      <div class="card"> 
+        <div class="card-body d-flex">
+          <div class="currency-chart-wrap">
+            <div id="currency-chart"> </div>
+          </div>
+          <div class="bg-light-warning text-center"> 
+            <h5 class="mb-sm-0">$21,43</h5><span class="f-12 f-w-500 font-warning"><i class="me-1" data-feather="trending-up"></i>+50%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 col-xxl-2"> 
+    <div class="currency-widget primary height-equal widget-currency">
+      <div class="d-flex">
+        <div class="currency-icon-widget"> 
+          <svg>
+            <use href="{% static 'assets/svg/icon-sprite.svg'%}#eth"></use>
+          </svg>
+        </div>
+        <div> 
+          <h6>Ethereum <span class="f-light">ETC</span></h6>
+        </div>
+      </div>
+      <div class="card"> 
+        <div class="card-body d-flex">
+          <div class="currency-chart-wrap">
+            <div id="currency-chart2"></div>
+          </div>
+          <div class="bg-light-primary text-center"> 
+            <h5 class="mb-0">$7,450</h5><span class="f-12 f-w-500 font-primary"><i class="me-1" data-feather="trending-up"> </i>+35%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 col-xxl-2"> 
+    <div class="currency-widget success height-equal widget-currency">
+      <div class="d-flex">
+        <div class="currency-icon-widget"> 
+          <svg>
+            <use href="{% static 'assets/svg/icon-sprite.svg'%}#ltc"></use>
+          </svg>
+        </div>
+        <div> 
+          <h6>Leave Travel <span class="f-light">LTC</span></h6>
+        </div>
+      </div>
+      <div class="card"> 
+        <div class="card-body d-flex">
+          <div class="currency-chart-wrap">
+            <div id="currency-chart3"></div>
+          </div>
+          <div class="bg-light-success text-center"> 
+            <h5 class="mb-0">$2,198</h5><span class="f-12 f-w-500 font-success"><i class="me-1" data-feather="trending-up"> </i>+73%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xxl-3 col-sm-6"> 
+    <div class="card height-equal radial-height">
+      <div class="card-body radial-progress-card"> 
+        <div> 
+          <h6 class="mb-0">Average Sales Per Day</h6>
+          <div class="sale-details"> 
+            <h5 class="font-primary mb-0">45,908</h5><span class="f-12 f-light f-w-500"><i data-feather="arrow-up"></i>+5.7%</span>
+          </div>
+          <p class="f-light"> The point of using Lorem Ipsum</p>
+        </div>
+        <div class="radial-chart-wrap"> 
+          <div id="radial-chart"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xxl-3 col-sm-6"> 
+    <div class="card height-equal radial-height">
+      <div class="card-body radial-progress-card"> 
+        <div> 
+          <h6 class="mb-0">Average Profit Per Day</h6>
+          <div class="sale-details"> 
+            <h5 class="font-primary mb-0">89.6%</h5><span class="f-12 f-light f-w-500"><i data-feather="arrow-up"></i>+2.7%</span>
+          </div>
+          <p class="f-light"> The point of using Lorem Ipsum</p>
+        </div>
+        <div class="radial-chart-wrap"> 
+          <div id="radial-chart1"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-xl-3 col-lg-6 box-col-6"> 
+    <div class="card widget-1">
+      <div class="card-body"> 
+        <div class="widget-content">
+          <div class="widget-round secondary">
+            <div class="bg-round">
+              <svg class="svg-fill">
+                <use href="{% static 'assets/svg/icon-sprite.svg'%}#cart"> </use>
+              </svg>
+              <svg class="half-circle svg-fill">
+                <use href="{% static 'assets/svg/icon-sprite.svg'%}#halfcircle"></use>
+              </svg>
+            </div>
+          </div>
+          <div> 
+            <h4>10,000</h4><span class="f-light">Purchase</span>
+          </div>
+        </div>
+        <div class="font-secondary f-w-500"><i class="icon-arrow-up icon-rotate me-1"></i><span>+50%</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-xl-3 col-lg-6 box-col-6"> 
+    <div class="card widget-1">
+      <div class="card-body"> 
+        <div class="widget-content">
+          <div class="widget-round primary">
+            <div class="bg-round">
+              <svg class="svg-fill">
+                <use href="{% static 'assets/svg/icon-sprite.svg'%}#tag"> </use>
+              </svg>
+              <svg class="half-circle svg-fill">
+                <use href="{% static 'assets/svg/icon-sprite.svg'%}#halfcircle"></use>
+              </svg>
+            </div>
+          </div>
+          <div> 
+            <h4>4,200</h4><span class="f-light">Sales</span>
+          </div>
+        </div>
+        <div class="font-primary f-w-500"><i class="icon-arrow-up icon-rotate me-1"></i><span>+70%</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-xl-3 col-lg-6 box-col-6"> 
+    <div class="card widget-1">
+      <div class="card-body"> 
+        <div class="widget-content">
+          <div class="widget-round warning">
+            <div class="bg-round">
+              <svg class="svg-fill">
+                <use href="{% static 'assets/svg/icon-sprite.svg'%}#return-box"> </use>
+              </svg>
+              <svg class="half-circle svg-fill">
+                <use href="{% static 'assets/svg/icon-sprite.svg'%}#halfcircle"></use>
+              </svg>
+            </div>
+          </div>
+          <div> 
+            <h4>7000</h4><span class="f-light">Sales return</span>
+          </div>
+        </div>
+        <div class="font-warning f-w-500"><i class="icon-arrow-down icon-rotate me-1"></i><span>-20%</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-xl-3 col-lg-6 box-col-6"> 
+    <div class="card widget-1">
+      <div class="card-body"> 
+        <div class="widget-content">
+          <div class="widget-round success">
+            <div class="bg-round">
+              <svg class="svg-fill">
+                <use href="{% static 'assets/svg/icon-sprite.svg'%}#rate"> </use>
+              </svg>
+              <svg class="half-circle svg-fill">
+                <use href="{% static 'assets/svg/icon-sprite.svg'%}#halfcircle"></use>
+              </svg>
+            </div>
+          </div>
+          <div> 
+            <h4>5700</h4><span class="f-light">Purchase rate</span>
+          </div>
+        </div>
+        <div class="font-success f-w-500"><i class="icon-arrow-up icon-rotate me-1"></i><span>+70%</span></div>
+      </div>
+    </div>
+  </div>

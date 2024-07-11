@@ -1,0 +1,97 @@
+{% load static %}
+{% load sass_tags %}
+
+<div class="col call-chat-sidebar col-sm-12">
+  <div class="card">
+    <div class="card-body chat-body">
+      <div class="chat-box">
+        <!-- Chat left side Start-->
+        <div class="chat-left-aside">
+          <div class="media"><img class="rounded-circle user-image" src="{% static 'assets/images/user/12.png'%}"
+              alt="">
+            <div class="about">
+              <div class="name f-w-600">Mark Jecno</div>
+              <div class="status">Status...</div>
+            </div>
+          </div>
+          <div class="people-list" id="people-list">
+            <div class="search">
+              <form class="theme-form"> {% csrf_token %}
+                <div class="mb-3">
+                  <input class="form-control" type="text" placeholder="Search"><i class="fa fa-search"></i>
+                </div>
+              </form>
+            </div>
+            <ul class="list">
+              <li class="clearfix"><img class="rounded-circle user-image" src="{% static 'assets/images/user/1.jpg'%}"
+                  alt="">
+                <div class="status-circle away"></div>
+                <div class="about">
+                  <a href="/user_profile" class="name">Vincent Porter</a>
+                  <div class="status">Hello Name</div>
+                </div>
+              </li>
+              <li class="clearfix"><img class="rounded-circle user-image" src="{% static 'assets/images/user/2.png'%}"
+                  alt="">
+                <div class="status-circle online"></div>
+                <div class="about">
+                  <a href="/user_profile" class="name">Aiden Chavez</a>
+                  <div class="status">Out is my favorite.</div>
+                </div>
+              </li>
+              <li class="clearfix"><img class="rounded-circle user-image" src="{% static 'assets/images/user/8.jpg'%}"
+                  alt="">
+                <div class="status-circle online"></div>
+                <div class="about">
+                  <a href="/user_profile" class="name">Prasanth Anand</a>
+                  <div class="status">Change for anyone.</div>
+                </div>
+              </li>
+              <li class="clearfix"><img class="rounded-circle user-image" src="{% static 'assets/images/user/4.jpg'%}"
+                  alt="">
+                <div class="status-circle offline"></div>
+                <div class="about">
+                  <a href="/user_profile" class="name">Venkata Satyamu</a>
+                  <div class="status">First bun like a sun.</div>
+                </div>
+              </li>
+              <li class="clearfix"><img class="rounded-circle user-image" src="{% static 'assets/images/user/5.jpg'%}"
+                  alt="">
+                <div class="status-circle online"></div>
+                <div class="about">
+                  <a href="/user_profile" class="name">Ginger Johnston</a>
+                  <div class="status">it's my life. Mind it.</div>
+                </div>
+              </li>
+              <li class="clearfix"><img class="rounded-circle user-image" src="{% static 'assets/images/user/8.jpg'%}"
+                  alt="">
+                <div class="status-circle offline"></div>
+                <div class="about">
+                  <a href="/user_profile" class="name">Kori Thomas</a>
+                  <div class="status">Change for anyone.</div>
+                </div>
+              </li>
+              <li class="clearfix"><img class="rounded-circle user-image" src="{% static 'assets/images/user/1.jpg'%}"
+                  alt="">
+                <div class="status-circle online"></div>
+                <div class="about">
+                  <a href="/user_profile" class="name">Vincent Porter</a>
+                  <div class="status">Hello Name</div>
+                </div>
+              </li>
+              <li class="clearfix"><img class="rounded-circle user-image" src="{% static 'assets/images/user/8.jpg'%}"
+                  alt="">
+                <div class="status-circle online"></div>
+                <div class="about">
+                  <a href="/user_profile" class="name">Kori Thomas</a>
+                  <div class="status">Change for anyone.</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Chat left side Ends-->
+      </div>
+    </div>
+  </div>
+</div>

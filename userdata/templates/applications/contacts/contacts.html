@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+{% block css %}
+<!-- Plugins css start-->
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/select2.scss' %}">
+<link rel="stylesheet" type="text/css" href="{% sass_src 'assets/scss/vendors/sweetalert2.scss' %}">
+<!-- Plugins css Ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+      <div class="container-fluid">
+            {% include "layout/breadcrumb.html" %}
+
+            {% include "applications/contacts/components/contacts-1.html" %}
+            {% include "applications/contacts/components/contacts-2.html" %}
+            {% include "applications/contacts/components/contacts-3.html" %}
+            {% include "applications/contacts/components/contacts-4.html" %}
+            {% include "applications/contacts/components/contacts-5.html" %}
+            {% include "applications/contacts/components/contacts-6.html" %}
+
+      </div>
+</div>
+
+      {% endblock %}
+
+      {% block scriptcontent %}
+      <!-- Plugins JS start-->
+      <script src="{% static 'assets/js/notify/bootstrap-notify.min.js'%}"></script>
+      <script src="{% static 'assets/js/sweet-alert/sweetalert.min.js'%}"></script>
+      <script src="{% static 'assets/js/select2/select2.full.min.js'%}"></script>
+      <script src="{% static 'assets/js/select2/select2-custom.js'%}"></script>
+      <script src="{% static 'assets/js/form-validation-custom.js'%}"></script>
+      <script src="{% static 'assets/js/bookmark/jquery.validate.min.js'%}"></script>
+      <script src="{% static 'assets/js/contacts/custom.js'%}"></script>
+      <script src="{% static 'assets/js/tooltip-init.js'%}"></script>
+      <!-- Plugins JS Ends-->
+      {% endblock %}

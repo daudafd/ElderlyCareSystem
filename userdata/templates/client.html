@@ -1,0 +1,354 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Page Sidebar Ends-->
+<div class="page-body">
+  <div class="container-fluid">
+    <div class="page-title">
+      <div class="row">
+        <div class="col-6">
+          <h4>Clients</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Container-fluid starts-->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Add rows  Starts-->
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <!-- <button class="btn btn-primary mb-3" id="addRow">Add new row</button> -->
+            <button class="btn btn-primary mb-3" id="addClients" type="button" data-bs-toggle="modal"
+              data-bs-target=".bd-example-modal-lg"><i class="fa fa-plus"></i>  Add New Client</button>
+
+            <!-- HTML (DOM) sourced data  Starts-->
+            <div class="col-sm-12">
+              <div class="card">
+                <div class="card-header pb-0 card-no-border">
+                  <!-- <h4 class="mb-3">HTML (DOM) sourced data</h4><span>The foundation for DataTables is progressive enhancement, so it is very adept at reading table information directly from the DOM. This example shows how easy it is to add searching, ordering and paging to your HTML table by simply running DataTables on it.</span> -->
+                </div>
+                <div class="card-body">
+                  <div class="dt-ext table-responsive">
+                    <table class="display" id="data-source-1" style="width:100%">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Gender</th>
+                          <th>Age</th>
+                          <!-- <th>CV</th> -->
+                          <th>Assign To</th>
+                          <th>Status</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for client in clients %}
+                        <tr>
+                          <td>{{ forloop.counter }}</td>
+                          <td>{{ client.first_name }}</td>
+                          <td>{{ client.last_name }}</td>
+                          <td>{{ client.gender }}</td>
+                          <td>{{ client.age }}</td>
+                          <!-- <td class="action"> <a class="pdf" href="../assets/pdf/sample.pdf" target="_blank"><i
+                                class="icofont icofont-file-pdf"> </i></a>
+                          </td> -->
+                          <td>{{ client.user }}</td>
+                          <td> <span class="badge rounded-pill badge-danger">Pending</span></td>
+                          <td>
+                            <ul class="action">
+                              <li class="edit" id="addClients" type="button" data-bs-toggle="modal"
+                                data-bs-target="#editClientModal{{ client.id }}"> <a href="#"><i
+                                    class="icon-pencil-alt"></i></a></li>
+                              <li class="more"><a href="{% url 'client_profile' client_id=client.id %}"><i class="icon-more"></i></a></li>
+                              <li class="delete"><a href="#"><i class="icon-trash"></i></a></li>
+                            </ul>
+                          </td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <th>#</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Gender</th>
+                          <th>Age</th>
+                          <!-- <th>CV</th> -->
+                          <th>Assign To</th>
+                          <th>Status</th>
+                          <th>Action</th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- HTML (DOM) sourced data  Ends-->
+
+
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add rows Ends-->
+
+<!-- Add Client modal-->
+<div class="modal fade bd-example-modal-lg" id="addClientModal" tabindex="-1" role="dialog" aria-labelledby="addClientModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myExtraLargeModal">Enter client details</h4>
+        <button class="btn-close py-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body dark-modal">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="card">
+                <div class="card-body">
+                  <form method="post" action="{% url 'add_client' %}" class="form theme-form">
+                    {% csrf_token %}
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="mb-4">
+                          <label>First Name</label>
+                          <input class="form-control" type="text" name="first_name" placeholder="Enter first name" required>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="mb-4">
+                          <label>Last Name</label>
+                          <input class="form-control" type="text" name="last_name" placeholder="Enter last name" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <div class="mb-3">
+                          <label>Gender</label>
+                          <select class="form-select" name="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="mb-3">
+                          <label>Marital Status</label>
+                          <select class="form-select" name="marital_status" required>
+                            <option value="">Select Marital Status</option>
+                            <option value="Married">Married</option>
+                            <option value="Divorced">Divorced</option>
+                            <option value="Single">Single</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="mb-3">
+                          <label>D.O.B</label>
+                          <input class="form-control digits" type="date" name="dob" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="mb-4">
+                          <label>Phone</label>
+                          <input class="form-control" type="text" name="phone" placeholder="(+234)7064203959" required>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="mb-4">
+                          <label>Email</label>
+                          <input class="form-control" type="text" name="email" placeholder="johndoe@gmail.com" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="mb-3">
+                          <label>Address</label>
+                          <input class="form-control" type="text" name="address" placeholder="Address">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <div class="mb-3">
+                          <label>Weight (kg)</label>
+                          <input class="form-control" type="text" name="weight" placeholder="60" required>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="mb-3">
+                          <label>Height (ft)</label>
+                          <input class="form-control" type="text" name="height" placeholder="5.64" required>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="mb-3">
+                          <label for="assigned_user">Assign User</label>
+                          {{ form.assigned_user }}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="text-end">
+                          <button class="btn btn-primary me-3" type="submit">Submit</button>
+                          <input class="btn btn-light" type="reset" value="Cancel">
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Add Client Modal Ends -->
+
+
+<!-- Edit Client modal-->
+{% for client in clients %}
+<div class="modal fade bd-example-modal-lg-edit" id="editClientModal{{ client.id }}" tabindex="-1" role="dialog"
+  aria-labelledby="editClientModalLabel{{ client.id }}" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="editClientModalLabel{{ client.id }}">Edit client details</h4>
+        <button class="btn-close py-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body dark-modal">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="card">
+                <div class="card-body">
+                  <form method="post" action="{% url 'edit_client' client.id %}" class="form theme-form">
+                    {% csrf_token %}
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="mb-4">
+                          <label>First Name</label>
+                          <input class="form-control" type="text" name="first_name" value="{{ client.first_name }}" required>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="mb-4">
+                          <label>Last Name</label>
+                          <input class="form-control" type="text" name="last_name" value="{{ client.last_name }}" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <div class="mb-3">
+                          <label>Gender</label>
+                          <select class="form-select" name="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="Male" {% if client.gender == "Male" %}selected{% endif %}>Male</option>
+                            <option value="Female" {% if client.gender == "Female" %}selected{% endif %}>Female</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="mb-3">
+                          <label>Marital Status</label>
+                          <select class="form-select" name="marital_status" required>
+                            <option value="">Select Marital Status</option>
+                            <option value="Married" {% if client.marital_status == "Married" %}selected{% endif %}>Married</option>
+                            <option value="Divorced" {% if client.marital_status == "Divorced" %}selected{% endif %}>Divorced</option>
+                            <option value="Single" {% if client.marital_status == "Single" %}selected{% endif %}>Single</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="mb-3">
+                          <label>D.O.B</label>
+                          <input class="form-control digits" type="date" name="dob" value="{{ client.dob|date:'Y-m-d' }}" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="mb-4">
+                          <label>Phone</label>
+                          <input class="form-control" type="text" name="phone" value="{{ client.phone }}" required>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="mb-4">
+                          <label>Email</label>
+                          <input class="form-control" type="text" name="email" value="{{ client.email }}" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="mb-3">
+                          <label>Address</label>
+                          <input class="form-control" type="text" name="address" value="{{ client.address }}" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <div class="mb-3">
+                          <label>Weight (kg)</label>
+                          <input class="form-control" type="text" name="weight" value="{{ client.weight }}" required>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="mb-3">
+                          <label>Height (ft)</label>
+                          <input class="form-control" type="text" name="height" value="{{ client.height }}" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <div class="mb-3">
+                          <label for="assigned_user">Assign User</label>
+                          {{ form.assigned_user }}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="text-end">
+                          <button class="btn btn-primary me-3" type="submit">Submit</button>
+                          <input class="btn btn-light" type="reset" value="Cancel">
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+<!-- Edit Client Modal Ends -->
+
+
+{% endblock %}
