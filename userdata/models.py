@@ -1,6 +1,29 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, AbstractUser
 from datetime import date
+
+
+class CustomUser(AbstractUser):
+    is_admin = models.BooleanField(default=False)
+    phone_number = models.CharField(max_length=20, blank=True)  # Add phone_number field
+
+
+    # Modify groups and user_permissions fields to include unique related_name
+    groups = models.ManyToManyField(
+        'auth.Group',
+        related_name='customuser_set',
+        blank=True,
+        help_text='The groups this user belongs to. A user will get all permissions granted to each of their groups.',
+        verbose_name='groups',
+    )
+    
+    user_permissions = models.ManyToManyField(
+        'auth.Permission',
+        related_name='customuser_set',
+        blank=True,
+        help_text='Specific permissions for this user.',
+        verbose_name='user permissions',
+    )
 
 class Client(models.Model):
     # Personal Information

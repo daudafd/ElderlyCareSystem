@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Page Sidebar Ends-->
+<div class="page-body">
+  <div class="container-fluid">
+    <div class="page-title">
+      <div class="row">
+        <div class="col-6">
+          <h4>Staff</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Container-fluid starts-->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Add rows  Starts-->
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <!-- <button class="btn btn-primary mb-3" id="addRow">Add new row</button> -->
+            <button class="btn btn-primary mb-3" id="addstaff" type="button" data-bs-toggle="modal"
+              data-bs-target=".bd-example-modal-lg"><i class="fa fa-plus"></i> Add New Staff</button>
+
+            <!-- HTML (DOM) sourced data  Starts-->
+            <div class="col-sm-12">
+              <div class="card">
+                <div class="card-header pb-0 card-no-border">
+                  <!-- <h4 class="mb-3">HTML (DOM) sourced data</h4><span>The foundation for DataTables is progressive enhancement, so it is very adept at reading table information directly from the DOM. This example shows how easy it is to add searching, ordering and paging to your HTML table by simply running DataTables on it.</span> -->
+                </div>
+                <div class="card-body">
+                  <div class="dt-ext table-responsive">
+                    <table class="display" id="data-source-1" style="width:100%">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Username</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Phone No.</th>
+                          <th>Email</th>
+                          <!-- <th>Date Joined</th> -->
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for user in users %}
+                        <tr>
+                          <td>{{ forloop.counter }}</td>
+                          <td>{{ user.username }}</td>
+                          <td>{{ user.first_name }}</td>
+                          <td>{{ user.last_name }}</td>
+                          <td>{{ user.phone_number }}</td>
+                          <td>{{ user.email }}</td>
+                          <!-- <td>{{ user.date_joined }}</td> -->
+                          </td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <th>#</th>
+                          <th>Username</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Phone No.</th>
+                          <th>Email</th>
+                          <!-- <th>Date Joined</th> -->
+                        </tr>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- HTML (DOM) sourced data  Ends-->
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add rows Ends-->
+
+<!-- Add Client modal-->
+<div class="modal fade bd-example-modal-lg" id="addStaffModal" tabindex="-1" role="dialog"
+  aria-labelledby="addStaffModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myExtraLargeModal">Enter Staff details</h4>
+        <button class="btn-close py-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body dark-modal">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="card">
+                <div class="card-body">
+                  <form method="post" action="{% url 'add_user' %}">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                      <label for="username">Username</label>
+                      <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="mb-3">
+                          <label for="first_name">First Name</label>
+                          <input type="text" class="form-control" id="first_name" name="first_name" required>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="mb-3">
+                          <label for="last_name">Last Name</label>
+                          <input type="text" class="form-control" id="last_name" name="last_name" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="mb-3">
+                          <label for="phone_number">Phone Number</label>
+                          <input type="tel" class="form-control" id="phone_number" name="phone_number" required>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="mb-3">
+                          <label for="email">Email</label>
+                          <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="mb-3">
+                          <label for="password1">Password</label>
+                      <input type="password" class="form-control" id="password1" name="password1" required>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="mb-3">
+                          <label for="password2">Confirm Password</label>
+                      <input type="password" class="form-control" id="password2" name="password2" required>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Staff</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Add Client Modal Ends -->
+
+
+<!-- Edit Client modal-->
+{% for client in clients %}
+<div class="modal fade bd-example-modal-lg-edit" id="editClientModal{{ client.id }}" tabindex="-1" role="dialog"
+  aria-labelledby="editClientModalLabel{{ client.id }}" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="editClientModalLabel{{ client.id }}">Edit client details</h4>
+        <button class="btn-close py-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body dark-modal">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="card">
+                <div class="card-body">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+<!-- Edit Client Modal Ends -->
+
+
+{% endblock %}

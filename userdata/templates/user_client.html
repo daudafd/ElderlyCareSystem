@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Page Sidebar Ends-->
+<div class="page-body">
+  <div class="container-fluid">
+    <div class="page-title">
+      <div class="row">
+        <div class="col-6">
+          <h4>Clients</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Container-fluid starts-->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Add rows  Starts-->
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body">
+
+            <!-- HTML (DOM) sourced data  Starts-->
+            <div class="col-sm-12">
+              <div class="card">
+                <div class="card-header pb-0 card-no-border">
+                  <!-- <h4 class="mb-3">HTML (DOM) sourced data</h4><span>The foundation for DataTables is progressive enhancement, so it is very adept at reading table information directly from the DOM. This example shows how easy it is to add searching, ordering and paging to your HTML table by simply running DataTables on it.</span> -->
+                </div>
+                <div class="card-body">
+                  <div class="dt-ext table-responsive">
+                    <table class="display" id="data-source-1" style="width:100%">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Gender</th>
+                          <th>Age</th>
+                          <!-- <th>CV</th> -->
+                          <th>Status</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for client in clients %}
+                        <tr>
+                          <td>{{ forloop.counter }}</td>
+                          <td>{{ client.first_name }}</td>
+                          <td>{{ client.last_name }}</td>
+                          <td>{{ client.gender }}</td>
+                          <td>{{ client.age }}</td>
+                          <!-- <td class="action"> <a class="pdf" href="../assets/pdf/sample.pdf" target="_blank"><i
+                                class="icofont icofont-file-pdf"> </i></a>
+                          </td> -->
+                          <td> <span class="badge rounded-pill badge-danger">Pending</span></td>
+                          <td>
+                            <ul class="action">
+                              <li class="edit" id="addClients" type="button" data-bs-toggle="modal"
+                                data-bs-target="#editClientModal{{ client.id }}"> <a href="#"><i
+                                    class="icon-pencil-alt"></i></a></li>
+                              <li class="more"><a href="{% url 'client_profile' client_id=client.id %}"><i class="icon-more"></i></a></li>
+                            </ul>
+                          </td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <th>#</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Gender</th>
+                          <th>Age</th>
+                          <!-- <th>CV</th> -->
+                          <th>Assign To</th>
+                          <th>Status</th>
+                          <th>Action</th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- HTML (DOM) sourced data  Ends-->
+
+
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add rows Ends-->
+
+{% endblock %}

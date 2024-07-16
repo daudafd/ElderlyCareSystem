@@ -5,17 +5,35 @@ from django.template.loader import get_template
 from weasyprint import HTML
 from .models import Client
 from django.db.models import Avg, Count
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, get_user_model
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User, auth
-from .forms import ClientRegistrationForm
+from django.contrib.auth.models import User, Group, auth
+from .forms import ClientRegistrationForm, UserRegistrationForm
+from .decorators import unauthenticated_user, allowed_users, admin_only
+
 
 @login_required(login_url='login')
+# @allowed_users(allowed_roles=['admin'])
+@admin_only
 def index(request):
     return render(request, 'index.html')
 
 @login_required(login_url='login')
+# @allowed_users(allowed_roles=['admin'])
+# @admin_only
+def home(request):
+    return render(request, 'home.html')
+
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['admin'])
+@admin_only
+def staff(request):
+    users = User.objects.filter(is_staff=False)  # Fetch all users except those with is_staff=True
+    return render(request, 'staff.html', {'users': users})
+
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['admin'])
 def add_client(request):
     users = User.objects.all()  # Query all users to pass to the template for dropdown
 
@@ -37,8 +55,48 @@ def add_client(request):
     return render(request, 'add_client.html', {'form': form, 'users': users})
 
 
+@login_required(login_url='/login/')
+@allowed_users(allowed_roles=['admin'])
+def add_user(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        email = request.POST['email']
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        phone_number = request.POST['phone_number']
+        password1 = request.POST['password1']
+        password2 = request.POST['password2']
+
+        if password1 != password2:
+            # Handle password mismatch error
+            return render(request, 'staff.html', {'error': 'Passwords do not match!'})
+
+        # Create a new user object
+        User = get_user_model()
+        user = User.objects.create_user(username, email, password1)
+        user.first_name = first_name
+        user.last_name = last_name
+        user.phone_number = phone_number
+        user.save()
+
+        # Optional: Use signals for group assignment (replace 'user' with your group name)
+        # @receiver(user_registered)
+        # def assign_user_group(sender, user, request, **kwargs):
+        #     user_group = Group.objects.get(name='user')
+        #     user.groups.add(user_group)
+
+        # Or, assign group directly within the view function
+        group = Group.objects.get(name='user')
+        user.groups.add(group)
+
+        # Handle successful user creation (e.g., redirect to a success page)
+        return redirect('staff')  # Replace 'success_url' with your desired redirect
+
+    return render(request, 'staff.html')
+
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['admin'])
 def client(request):
     clients = Client.objects.all()
     if request.method == 'POST':
@@ -52,6 +110,23 @@ def client(request):
 
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['user'])
+def user_client(request):
+    clients = Client.objects.all()
+
+    if request.method == 'POST':
+        form = ClientRegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('user_client')  # Stay on the same page to refresh the client list
+    else:
+        form = ClientRegistrationForm()
+
+    return render(request, 'user_client.html', {'clients': clients, 'form': form})
+
+
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['admin'])
 def edit_client(request, pk):
     client = get_object_or_404(Client, pk=pk)
     users = User.objects.all()  # Query all users for the dropdown
@@ -76,6 +151,7 @@ def edit_client(request, pk):
 
 
 @login_required(login_url='login')
+# @allowed_users(allowed_roles=['admin'])
 def client_profile(request, client_id):
     # Fetch the client object by its primary key (client_id)
     client = get_object_or_404(Client, pk=client_id)
@@ -142,6 +218,7 @@ def generate_pdf(request):
     HTML(string=html).write_pdf(response)
     return response
 
+@unauthenticated_user
 def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('input_username')

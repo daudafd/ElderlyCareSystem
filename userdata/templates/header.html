@@ -174,22 +174,33 @@
                                 <use href="{% static 'assets/svg/icon-sprite.svg#fill-landing-page' %}"></use>
                             </svg><span>Home</span></a>
                         </li>
+                        {% if request.user.is_staff %}
                         <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="{% url 'client' %}">
                             <svg class="stroke-icon">
                                 <use href="{% static 'assets/svg/icon-sprite.svg#stroke-landing-page' %}"></use>
                             </svg>
                             <svg class="fill-icon">
                                 <use href="{% static 'assets/svg/icon-sprite.svg#fill-landing-page' %}"></use>
-                            </svg><span>All Clients</span></a>
-                        </li>  
-                        <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="{% url 'client' %}">
+                            </svg><span>Client</span></a>
+                        </li>
+                        <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="{% url 'staff' %}">
+                            <svg class="stroke-icon">
+                                <use href="{% static 'assets/svg/icon-sprite.svg#stroke-landing-page' %}"></use>
+                            </svg>
+                            <svg class="fill-icon">
+                                <use href="{% static 'assets/svg/icon-sprite.svg#fill-landing-page' %}"></use>
+                            </svg><span>Staff</span></a>
+                        </li>    
+                        {% elif request.user.is_active %}
+                        <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="{% url 'user_client' %}">
                             <svg class="stroke-icon">
                                 <use href="{% static 'assets/svg/icon-sprite.svg#stroke-landing-page' %}"></use>
                             </svg>
                             <svg class="fill-icon">
                                 <use href="{% static 'assets/svg/icon-sprite.svg#fill-landing-page' %}"></use>
                             </svg><span>My Clients</span></a>
-                        </li>                          
+                        </li> 
+                        {% endif %}                         
                     </ul>
                 </div>
                 <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
